@@ -9,18 +9,26 @@ cuneiform_cmd = path + '/cuneiform/bin/cuneiform'
 os.environ['DYLD_LIBRARY_PATH'] = path + '/cuneiform/lib/'
 os.environ['CF_DATADIR'] =  path + '/cuneiform/share/cuneiform/'
 
+logfile = open('/tmp/reader.log', 'w')
+
 
 class Reader:
 
+
     def __init__(self):
-        self.code = None 
+        self.code = Code() 
+
 
     def process(self, image):
-        return self.merge_code(self.extract_code(image))
+        scan = self.extract_code(image)
+        self.code.add_scan(scan)
+        return str(self.code)
+
 
     def reset(self):
-        self.code = None
+        self.code = Code()
         
+
     def extract_code(self, im):
         # convert to B/W
         im = im.convert('L')
@@ -51,54 +59,150 @@ class Reader:
             f.close()
             os.remove(txt)
         return result
+
+
+class Character:
+
+
+    def __init__(self, char, index):
+        self.char = char
+        self.index = index
+
+
+class Code:
+
+
+    def __init__(self):
+        template = 'xxxxxxxxxxxxx>xxxxxxxxxxxxxxxxxxxxxxxxxxx+ xxxxxxxxx>'
+
+        self.fixed_indices = []
+        for i in range(len(template)):
+            if template[i] != 'x':
+                self.fixed_indices.append(i)
+
+        self.code = None
+        self.char_table = [[] for i in range(len(template))]
+        self.scans = []
+
+        self.add_scan(template)
+        
     
-    def merge_code(self, code):
+    def add_scan(self, scan):
+        """
+        Add a scan that represents parts of the current code.
+        """
+        if scan is None:
+            return
+
+        scan = scan.replace(')', '>')
+        logfile.write("\nscan: " + scan)
+        ps = self.find_positions(scan)
+        logfile.write("\nps: " + str(ps))
+        chars = []
+        for i in range(len(scan)):
+            c = Character(scan[i], ps[i])
+            chars.append(c)
+            if self.code is None or (c.index >= 0 and 
+                                     c.index not in self.fixed_indices and
+                                     c.char.isdigit()):
+                self.char_table[c.index].append(c)            
+        self.scans.append(chars)
+ 
+        self.code = self.calc_code()
+        logfile.write("\ncode: " + str(self.code))
+        logfile.flush()
+
+        
+    def calc_code(self):
+        """
+        Calculate the string value of the code.
+        
+        Chooses the most probable character at each position from the
+        internal character table to construct the code.
+        """
+        code = []
+        for i in range(len(self.char_table)):
+            row = self.char_table[i]
+            counts = {}
+            maxc = 'x'
+            maxn = -1
+            for c in row:
+                if not counts.has_key(c.char):
+                    counts[c.char] = 0
+                if c.char != 'x':
+                    counts[c.char] += 1
+                if counts[c.char] > maxn:
+                    maxn = counts[c.char]
+                    maxc = c.char
+            code.append(maxc)
+
+        return ''.join(code)
+
+
+    def find_positions(self, s):
+        """
+        Find the character positions of a given scan in the code.
+        
+        Uses dynamic programming to calculate the minimal difference
+        between the code and the scan to determine the positions.
+        """
         if self.code is None:
-            self.code = code
-        elif code is not None:
-            index = self.lcsubstr(self.code, code)
-            if index[1] > 4: # require some overlap to merge code parts
-                l2 = index[1]/2
-                index0 = index[0][0] + l2
-                index1 = index[0][1] + l2
-                if index[0][0] > index[0][1]:
-                    # merge with the tail of the old code
-                    self.code = self.code[:index0] + code[index1:]
-                else:
-                    # merge with the head of the old code
-                    self.code = code[:index1] + self.code[index0:]
+            return [i for i in range(len(s))]
+
+        (start, top, left, diag) = range(4)
+        table = [[(0, start) for j in range(len(s))] for i in range(len(self.code))]
+
+        # calculate table
+        for i in range(len(self.code)):
+            for j in range(len(s)):
+                props = []
+
+                if i > 0:
+                    props.append((table[i - 1][j][0], top))
+                
+                if j > 0:
+                    props.append((table[i][j - 1][0], left))
+
+                if i > 0 and j > 0:
+                    pdiag = (table[i - 1][j - 1][0], diag)
+                    if self.code[i] == 'x' or self.code[i] == s[j]: 
+                        pdiag = (pdiag[0] + 1, pdiag[1])
+                    props.append(pdiag)
+                    
+                maxp = (0, start)
+                for p in props:
+                    if p[0] > maxp[0]:
+                        maxp = p
+
+                table[i][j] = maxp
+                
+        i = len(self.code) - 1
+        j = len(s) - 1
+        ps = [-1 for k in range(len(s))]
+
+        # construct result
+        last_action = -1
+        while True:
+            c = table[i][j]
+            if c[1] == top:
+                if last_action != top:
+                    ps[j] = i
+                i -= 1
+            elif c[1] == left:
+                ps[j] = i
+                j -= 1
+            elif c[1] == diag:
+                ps[j] = i
+                i -= 1
+                j -= 1
             else:
-                self.code = code
+                if last_action != top:
+                    ps[j] = i
+                break
+            last_action = c[1]
 
+        return ps
+
+
+    def __str__(self):
         return self.code
-
-    def lcsubstr(self, s, t):
-        """
-        Get the longest common substring of two strings.
-        
-        The resulting tuple ((i, j), l) encodes the substring as
-        i -- the start index of the substring in s
-        j -- the start index of the substring in t
-        l -- the length of the substring
-        """
-        ret = (0, 0)
-        l = [(0, 0) for i in range(len(t))]
-        lprev = [(0, 0) for i in range(len(t))]
-        for i in range(len(s)):
-            for j in range(len(t)):
-                if s[i] == t[j]:
-                    index = lprev[j-1][0]
-                    length = lprev[j-1][1]
-                    if length == 0:
-                        index = (i, j)
-                    l[j] = (index, length + 1)
-                    if l[j][1] > ret[1]:
-                        ret = l[j]
-                else:
-                    # missing skip/swap for similar substrings
-                    l[j] = ((0, 0), 0)
-            temp = lprev
-            lprev = l
-            l = temp
-        
-        return ret
