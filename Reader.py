@@ -54,7 +54,7 @@ class Code:
     
     def add_scan(self, scan):
         """
-        Add a scan that represents parts of the current code.
+        Add a scan that represents parts of the code.
         """
         if scan is None:
             return

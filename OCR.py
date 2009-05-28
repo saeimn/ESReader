@@ -6,55 +6,87 @@ from tempfile import mktemp
 from math import sqrt
 from PIL import Image, ImageFilter, ImageStat
 
+
 path = os.getcwd()
-gocr_cmd = path + '/gocr'
-gocr_database = path + '/database/'
+GOCR_CMD = path + '/gocr'
+GOCR_ARGS = ' -s 20 -u x -C "0-9>+ " -p %s -m %d %s'
+GOCR_DATABASE = path + '/database/'
 
-def recognize(im):
-    # convert to B/W
-    im = im.convert('L')
 
-    im = crop_to_code(im)
+def recognize(image):
+    """
+    Perform OCR on a PIL image of a bill.
+    
+    image -- The source image.
 
-    # sharpen the image
-    kx = ImageFilter.Kernel((5, 5), ( 0, -1, -1, -1,  0, 
-                                      -1,  0,  0,  0, -1,
-                                      -1,  0, 14,  0, -1,
-                                      -1,  0,  0,  0, -1,
-                                      0, -1, -1, -1,  0 ))
-    im = im.filter(kx)
-    f = mktemp() + '.png'
-    im.save(f, "PNG")
+    Returns the recognized text as string if any, None otherwise.
+    """
+    image = preprocess(image)
+    if image:
+        f = mktemp() + '.png'
+        image.save(f, 'PNG')
+        string = getoutput(GOCR_CMD + (GOCR_ARGS % (GOCR_DATABASE, 2, f)))
+        os.remove(f)
 
-    # run gocr on the image
-    string = getoutput('%s -s 20 -u x -C "0-9>+ " -p %s %s' % (gocr_cmd, gocr_database, f))
-    os.remove(f)
-
-    # search for string in the output file
-    result = None
-    for l in string.split('\n'):
-        if l.count('x') < 5 and re.match('([x\d>\+]{7,20}| [x\d]{9}>){1,2}', l):
-            result = l[:-1]
-            break
+        # search for string in the output
+        result = None
+        for l in string.split('\n'):
+            if l.count('x') < 5 and re.match('([x\d>\+]{7,20}| [x\d]{9}>){1,2}', l):
+                result = l[:-1]
+                break
         
-    return result
+        return result
+    else:
+        return None
+    
+
+def preprocess(image):
+    # convert image to B/W
+    image = image.convert('L')
+
+    image = crop_to_code(image)
+
+    if image:
+        # sharpen the image
+        kx = ImageFilter.Kernel((5, 5), ( 0, -1, -1, -1,  0, 
+                                         -1,  0,  0,  0, -1,
+                                         -1,  0, 14,  0, -1,
+                                         -1,  0,  0,  0, -1,
+                                          0, -1, -1, -1,  0 ))
+        return image.filter(kx)
+    else:
+        return None
 
 
 def crop_to_code(image):
+    """
+    Crop an image of a bill to its code region.
+
+    image -- The source image.
+
+    Returns the cropped PIL image if the region is found and None otherwise.
+    """
     (x1, y1, x2, y2) = locate_code_box(image)
-    (starty, endy) = calculate_text_yoffsets(image, (x1, y1, x2, y2))
+    (top, bottom) = calculate_text_yinsets(image, (x1, y1, x2, y2))
 
     tolerance = 3
-    y1 = max(y1 + starty - tolerance, 0)
-    y2 = min(y2 - endy + tolerance, image.size[1])
+    y1 = max(y1 + top - tolerance, 0)
+    y2 = min(y2 - bottom + tolerance, image.size[1])
 
     if x1 < x2 and y1 < y2:
         return image.crop((x1, y1, x2, y2))
     else:
-        return image
+        return None
 
 
 def locate_code_box(image):
+    """
+    Locate a light box in the image (which hopefully contains the code).
+
+    image -- The source image.
+
+    Returns the coordinates of the box in a tuple (x1, y1, x2, y2).
+    """
     w = image.size[0]
     h = image.size[1]
     data = image.getdata()
@@ -99,8 +131,17 @@ def locate_code_box(image):
     return (x1, y1, x2, y2)
 
 
-def calculate_text_yoffsets(image, (x1, y1, x2, y2)):
-    g = calculate_mean_ygradients(image, (x1, y1, x2, y2))
+def calculate_text_yinsets(image, (x1, y1, x2, y2)):
+    """
+    Calculate the y insets of the text in an image with
+    light background and dark text.
+    
+    image -- The source image.
+    (x1, y1, x2, y2) -- The restricted image range.
+
+    Returns the tuple with the insets (top, bottom).
+    """
+    g = calculate_row_gradients(image, (x1, y1, x2, y2))
 
     mean = 0
     mean2 = 0
@@ -112,7 +153,7 @@ def calculate_text_yoffsets(image, (x1, y1, x2, y2)):
     stddev = sqrt(mean2 - mean*mean)
     stddev2 = stddev / 2
 
-    start = 0
+    top = 0
     i = len(g) - 1
     peak = -1
     while i >= 0:
@@ -120,12 +161,12 @@ def calculate_text_yoffsets(image, (x1, y1, x2, y2)):
             if peak < 0:
                 peak = i
         elif peak >= 0:
-            if peak - i > 4:
-                start = i
+            if peak - i > 3:
+                top = i
             peak = -1
         i -= 1
 
-    end = len(g) - 1
+    bottom = len(g) - 1
     i = 0
     peak = -1
     while i < len(g):
@@ -133,15 +174,23 @@ def calculate_text_yoffsets(image, (x1, y1, x2, y2)):
             if peak < 0:
                 peak = i
         elif peak >= 0:
-            if i - peak > 4:
-                end = len(g) - i - 1
+            if i - peak > 3:
+                bottom = len(g) - i - 1
             peak = -1
         i += 1
 
-    return (start, end)
+    return (top, bottom)
         
 
-def calculate_mean_ygradients(image, (x1, y1, x2, y2)):
+def calculate_row_gradients(image, (x1, y1, x2, y2)):
+    """
+    Calculate the mean gradient for each row in an image.
+    
+    image -- The source image.
+    (x1, y1, x2, y2) -- The restricted image range.
+
+    Returns the gradient values as list (with size y2 - y1 - 1).
+    """
     w = image.size[0]
     h = image.size[1]
     data = image.getdata()
@@ -157,23 +206,34 @@ def calculate_mean_ygradients(image, (x1, y1, x2, y2)):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        sys.exit(0)
-        
-    f = sys.argv[1]
-    image = Image.open(f)
-    image = image.convert('L')
-    image = crop_to_code(image)
+    i = 1
+    mode = 2
+    prepf = mktemp() + '.png'
+    while i < len(sys.argv) and sys.argv[i].startswith('-'):
+        if sys.argv[i] == '-l' or sys.argv[i] == '--learn':
+            mode = 130
+        elif sys.argv[i] == '-r' or sys.argv[i] == '--recognize':
+            mode = 2
+        else:
+            print 'Unrecognized option "' + sys.argv[i] + '"'
+            sys.exit(1)
+        i += 1
 
-    # sharpen the image
-    kx = ImageFilter.Kernel((5, 5), ( 0, -1, -1, -1,  0, 
-                                      -1,  0,  0,  0, -1,
-                                      -1,  0, 14,  0, -1,
-                                      -1,  0,  0,  0, -1,
-                                      0, -1, -1, -1,  0 ))
-    image = image.filter(kx)
+    fl = sys.argv[i:]
 
-    jpg = '/tmp/out.jpg'
-    image.save(jpg, 'JPEG')
-    os.system('open ' + f)
-    os.system('open ' + jpg)
+
+    for f in fl:
+        if not os.path.exists(f):
+            print "File not found: " + f
+            sys.exit(1)
+
+    for f in fl:
+        print 'Processing "' + f + '"... '
+        image = Image.open(f)
+        image = preprocess(image)
+        if image:
+            image.save(prepf, 'PNG')
+            os.system(GOCR_CMD + (GOCR_ARGS % (GOCR_DATABASE, mode, prepf)))
+            os.remove(prepf)
+        else:
+            print 'Preprocessing failed'

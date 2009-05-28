@@ -12,7 +12,7 @@ VERSION = '0.1'
 ICON = ''
 ID = 'com.apple.camreader'
 COPYRIGHT = 'Copyright 2009 Simon Hofer'
-DATA_FILES = ['English.lproj', 'gocr', 'learn/database']
+DATA_FILES = ['English.lproj', 'gocr', 'database']
 
 plist = dict(
     CFBundleIconFile            = ICON,
