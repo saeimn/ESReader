@@ -1,13 +1,7 @@
 import os
 import re
-from PIL import Image, ImageFilter
-from commands import getoutput
-from tempfile import mktemp
+import OCR
 
-path = os.getcwd()
-cuneiform_cmd = path + '/cuneiform/bin/cuneiform'
-os.environ['DYLD_LIBRARY_PATH'] = path + '/cuneiform/lib/'
-os.environ['CF_DATADIR'] =  path + '/cuneiform/share/cuneiform/'
 
 logfile = open('/tmp/reader.log', 'w')
 
@@ -20,7 +14,7 @@ class Reader:
 
 
     def process(self, image):
-        scan = self.extract_code(image)
+        scan = OCR.recognize(image)
         self.code.add_scan(scan)
         return str(self.code)
 
@@ -29,37 +23,7 @@ class Reader:
         self.code = Code()
         
 
-    def extract_code(self, im):
-        # convert to B/W
-        im = im.convert('L')
-
-        # sharpen the image
-        kx = ImageFilter.Kernel((5, 5), ( 0, -1, -1, -1,  0, 
-                                         -1,  0,  0,  0, -1,
-                                         -1,  0, 14,  0, -1,
-                                         -1,  0,  0,  0, -1,
-                                          0, -1, -1, -1,  0 ))
-        im = im.filter(kx)
-        bmp = mktemp() + '.bmp'
-        im.save(bmp, "BMP")
-
-        # run cuneiform on the image
-        txt = mktemp() + '.txt'
-        getoutput(cuneiform_cmd + ' -o ' + txt + ' ' + bmp)
-        os.remove(bmp)
-
-        # search for string in the output file
-        result = None
-        if os.path.exists(txt):
-            f = open(txt, 'r')
-            for l in f:
-                if re.match('([\d>\+]{7,}| [\d]{9}>){1,2}', l):
-                    result = l[:-1]
-                    break
-            f.close()
-            os.remove(txt)
-        return result
-
+    
 
 class Character:
 
@@ -74,6 +38,7 @@ class Code:
 
     def __init__(self):
         template = 'xxxxxxxxxxxxx>xxxxxxxxxxxxxxxxxxxxxxxxxxx+ xxxxxxxxx>'
+        self.template = template
 
         self.fixed_indices = []
         for i in range(len(template)):
@@ -124,8 +89,8 @@ class Code:
         for i in range(len(self.char_table)):
             row = self.char_table[i]
             counts = {}
-            maxc = 'x'
-            maxn = -1
+            maxc = self.template[i]
+            maxn = 2 # require 3 occurences to accept character
             for c in row:
                 if not counts.has_key(c.char):
                     counts[c.char] = 0
@@ -157,17 +122,24 @@ class Code:
             for j in range(len(s)):
                 props = []
 
+                if i > 0 and j > 0:
+                    pdiag = (table[i - 1][j - 1][0], diag)
+                    if i in self.fixed_indices and s[j] == self.template[i]:
+                        # we have a match with a fixed template char,
+                        # add special weight
+                        pdiag = (pdiag[0] + 5, pdiag[1])
+                    elif self.code[i] == 'x' or self.code[i] == s[j]: 
+                        # we have a match, add weight
+                        pdiag = (pdiag[0] + 1, pdiag[1])
+                    props.append(pdiag)
+
                 if i > 0:
+                    # skip character in code
                     props.append((table[i - 1][j][0], top))
                 
                 if j > 0:
-                    props.append((table[i][j - 1][0], left))
-
-                if i > 0 and j > 0:
-                    pdiag = (table[i - 1][j - 1][0], diag)
-                    if self.code[i] == 'x' or self.code[i] == s[j]: 
-                        pdiag = (pdiag[0] + 1, pdiag[1])
-                    props.append(pdiag)
+                    # skip character in scan, subtract weight
+                    props.append((table[i][j - 1][0] - 2, left))
                     
                 maxp = (0, start)
                 for p in props:

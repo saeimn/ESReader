@@ -12,7 +12,7 @@ VERSION = '0.1'
 ICON = ''
 ID = 'com.apple.camreader'
 COPYRIGHT = 'Copyright 2009 Simon Hofer'
-DATA_FILES = ['English.lproj', 'cuneiform']
+DATA_FILES = ['English.lproj', 'gocr', 'learn/database']
 
 plist = dict(
     CFBundleIconFile            = ICON,
@@ -35,9 +35,5 @@ setup(
   options = options,
 )
 
-# fix permissions of cuneiform executable
 import os
-appname = 'dist/%s.app' % NAME
-if os.path.exists(appname):
-    cuneiform = appname + '/Contents/Resources/cuneiform/bin/cuneiform'
-    os.system('chmod +x ' + cuneiform)
+os.system('chmod +x dist/CamReader.app/Contents/Resources/gocr')

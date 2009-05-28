@@ -34,21 +34,12 @@ class ReaderController(NSWindowController):
 
     def awakeFromNib(self):
         self.convolution = None
-        w = 640
-        h = 480
-        self.frame2 = NSImage.alloc().initWithSize_(NSMakeSize(w, h))
-        self.frameRep = NSBitmapImageRep.alloc().initWithBitmapDataPlanes_pixelsWide_pixelsHigh_bitsPerSample_samplesPerPixel_hasAlpha_isPlanar_colorSpaceName_bytesPerRow_bitsPerPixel_(
-            None, w, h, 8, 1, False, False, NSCalibratedWhiteColorSpace, 0, 0
-            )
-
-        self.frame2.addRepresentation_(self.frameRep)
-
         self.frame = None
         self.reader = Reader()
 
         self.camera = CSGCamera.alloc().init()
         self.camera.setDelegate_(self)
-        self.camera.startWithSize_((w, h))
+        self.camera.startWithSize_((640, 480))
         
         window = self.window()
         window.setAspectRatio_(window.frame().size)
@@ -108,7 +99,7 @@ class ReaderController(NSWindowController):
                 self._resetButton.setEnabled_(False)
 
         if reschedule:
-            self.scheduleTimer(2.0)
+            self.scheduleTimer(0.5)
         
     # IB Outlets
 
