@@ -143,41 +143,44 @@ def calculate_text_yinsets(image, (x1, y1, x2, y2)):
     """
     g = calculate_row_gradients(image, (x1, y1, x2, y2))
 
+    # cutoff the extrema on the border
+    cutoff = len(g) - 1
+    while g[cutoff] < 0:
+        cutoff -= 1
+    g = g[:cutoff]
+    
+    # find min, max, mean and stddev
+    gmax = max(g)
+    gmin = min(g)
     mean = 0
     mean2 = 0
     for i in g:
-        mean += abs(i)
+        mean += i
         mean2 += i*i
     mean /= len(g)
     mean2 /= len(g)
     stddev = sqrt(mean2 - mean*mean)
     stddev2 = stddev / 2
 
+    # find range for pattern tick down followed by tick up
     top = 0
-    i = len(g) - 1
-    peak = -1
-    while i >= 0:
-        if abs(g[i]) > mean + stddev2:
-            if peak < 0:
-                peak = i
-        elif peak >= 0:
-            if peak - i > 3:
-                top = i
-            peak = -1
-        i -= 1
+    bottom = len(g)
+    lastmin = -1
+    for i in range(len(g)):
+        if 2*g[i] > gmax: # tick up
+            if top > 0:
+                bottom = i
+                break
+        elif 2*g[i] < gmin: # tick down
+            top = i
 
-    bottom = len(g) - 1
-    i = 0
-    peak = -1
-    while i < len(g):
-        if abs(g[i]) > mean + stddev2:
-            if peak < 0:
-                peak = i
-        elif peak >= 0:
-            if i - peak > 3:
-                bottom = len(g) - i - 1
-            peak = -1
-        i += 1
+    # grow range to not cutoff too much content
+    while top > 0 and g[top] < mean - stddev2:
+        top -= 1
+    while bottom < len(g) - 1 and g[bottom] > mean + stddev2:
+        bottom += 1
+
+    bottom = len(g) - bottom - 1
 
     return (top, bottom)
         
@@ -207,13 +210,16 @@ def calculate_row_gradients(image, (x1, y1, x2, y2)):
 
 if __name__ == '__main__':
     i = 1
-    mode = 2
+    mode = -1
     prepf = mktemp() + '.png'
+    save = False
     while i < len(sys.argv) and sys.argv[i].startswith('-'):
         if sys.argv[i] == '-l' or sys.argv[i] == '--learn':
             mode = 130
         elif sys.argv[i] == '-r' or sys.argv[i] == '--recognize':
             mode = 2
+        elif sys.argv[i] == '-s' or sys.argv[i] == '--save':
+            save = True
         else:
             print 'Unrecognized option "' + sys.argv[i] + '"'
             sys.exit(1)
@@ -229,11 +235,15 @@ if __name__ == '__main__':
 
     for f in fl:
         print 'Processing "' + f + '"... '
+        if save:
+            prepf = f[:f.rfind('.')] + '-out.png'
         image = Image.open(f)
         image = preprocess(image)
         if image:
             image.save(prepf, 'PNG')
-            os.system(GOCR_CMD + (GOCR_ARGS % (GOCR_DATABASE, mode, prepf)))
-            os.remove(prepf)
+            if mode >= 0:
+                os.system(GOCR_CMD + (GOCR_ARGS % (GOCR_DATABASE, mode, prepf)))
+            if not save:
+                os.remove(prepf)
         else:
             print 'Preprocessing failed'
