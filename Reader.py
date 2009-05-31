@@ -192,3 +192,23 @@ class Code:
 
     def __str__(self):
         return self.code
+
+
+if __name__ == '__main__':
+    import sys
+    import os
+    from PIL import Image
+
+    fl = sys.argv[1:]
+
+    for f in fl:
+        if not os.path.exists(f):
+            print "File not found: " + f
+            sys.exit(1)
+
+    r = Reader()
+
+    for f in fl:
+        print 'Processing "' + f + '"... '
+        image = Image.open(f)
+        print 'Code: ',  r.process(image)
