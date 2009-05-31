@@ -16,7 +16,7 @@ class Reader:
     def process(self, image):
         scan = OCR.recognize(image)
         self.code.add_scan(scan)
-        return str(self.code)
+        return self.code
 
 
     def reset(self):
@@ -50,16 +50,17 @@ class Code:
         self.scans = []
 
         self.add_scan(template)
+        self.active_positions = []
         
     
     def add_scan(self, scan):
         """
         Add a scan that represents parts of the code.
         """
+        self.active_positions = []
         if scan is None:
             return
 
-        scan = scan.replace(')', '>')
         logfile.write("\nscan: " + scan)
         ps = self.find_positions(scan)
         logfile.write("\nps: " + str(ps))
@@ -70,12 +71,17 @@ class Code:
             if self.code is None or (c.index >= 0 and 
                                      c.index not in self.fixed_indices and
                                      c.char.isdigit()):
-                self.char_table[c.index].append(c)            
+                self.char_table[c.index].append(c)
+                self.active_positions.append(c.index)
         self.scans.append(chars)
  
         self.code = self.calc_code()
         logfile.write("\ncode: " + str(self.code))
         logfile.flush()
+
+        
+    def get_active_positions(self):
+        return self.active_positions
 
         
     def calc_code(self):
@@ -123,22 +129,30 @@ class Code:
                 props = []
 
                 if i > 0 and j > 0:
+                    # substitution/match
                     pdiag = (table[i - 1][j - 1][0], diag)
                     if i in self.fixed_indices and s[j] == self.template[i]:
                         # we have a match with a fixed template char,
-                        # add special weight
-                        pdiag = (pdiag[0] + 5, pdiag[1])
-                    elif self.code[i] == 'x' or self.code[i] == s[j]: 
-                        # we have a match, add weight
+                        # add special bonus
+                        pdiag = (pdiag[0] + 4, pdiag[1])
+                    elif self.code[i] == 'x' or s[j] == 'x' or self.code[i] == s[j]: 
+                        # we have a match add bonus
+                        pdiag = (pdiag[0] + 1, pdiag[1])
+                    if table[i - 1][j - 1][1] == diag:
+                        # add bonus to reward successive match/substitute steps
                         pdiag = (pdiag[0] + 1, pdiag[1])
                     props.append(pdiag)
 
                 if i > 0:
                     # skip character in code
                     props.append((table[i - 1][j][0], top))
+                    if table[i - 1][j][1] == top:
+                        # add bonus to reward successive skip steps
+                        pdiag = (pdiag[0] + 1, pdiag[1])
                 
                 if j > 0:
                     # skip character in scan, subtract weight
+                    # (should happen very rarely)
                     props.append((table[i][j - 1][0] - 2, left))
                     
                 maxp = (0, start)

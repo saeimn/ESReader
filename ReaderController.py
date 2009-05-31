@@ -6,6 +6,7 @@ from PIL import Image
 from Reader import Reader
 from tempfile import mktemp
 import re
+import cProfile
 
 class CameraView(NSView):
     
@@ -33,13 +34,22 @@ class CameraView(NSView):
 class ReaderController(NSWindowController):
 
     def awakeFromNib(self):
-        self.convolution = None
+        self.red_color = NSColor.colorWithCalibratedRed_green_blue_alpha_(1.0, 0.5, 0.5, 1.0)
+        self.green_color = NSColor.colorWithCalibratedRed_green_blue_alpha_(0.6, 1.0, 0.6, 1.0)
+        self.blue_color = NSColor.colorWithCalibratedRed_green_blue_alpha_(0.1, 0.5, 0.85, 1.0)
+        self.white_color = NSColor.colorWithCalibratedRed_green_blue_alpha_(1.0, 1.0, 1.0, 1.0)
+
         self.frame = None
         self.reader = Reader()
 
         self.camera = CSGCamera.alloc().init()
         self.camera.setDelegate_(self)
         self.camera.startWithSize_((640, 480))
+
+        self._codeView.setString_("Initializing...")
+        self._codeView.setTextColor_(self.white_color)
+
+        self._msgLabel.setHidden_(True)
         
         window = self.window()
         window.setAspectRatio_(window.frame().size)
@@ -79,23 +89,35 @@ class ReaderController(NSWindowController):
         reschedule = True
         if self.frame:
             code = self.reader.process(self.nsimage2pil(self.frame))
-            if code is not None:
-                self._numberLabel.setStringValue_(code)
-                self._resetButton.setEnabled_(True)
-
-                if re.match('^\d{13}>\d{27}\+ \d{9}>$', code):
+            strcode = str(code)
+            if strcode is not None:
+                self._codeView.setString_(strcode)
+                if re.match('^\d{13}>\d{27}\+ \d{9}>$', strcode):
                     # code has valid format, stop reader and copy code
-                    self._numberLabel.setTextColor_(NSColor.colorWithCalibratedRed_green_blue_alpha_(0.6, 1.0, 0.6, 1.0))
-                    self.copyCode(code)
+                    self._codeView.setTextColor_(self.green_color)
+                    self.copyCode(strcode)
                     self._msgLabel.setStringValue_("Code copied")
                     self._msgLabel.setHidden_(False)
                     reschedule = False
                 else:
-                    self._numberLabel.setTextColor_(NSColor.colorWithCalibratedRed_green_blue_alpha_(1.0, 0.6, 0.6, 1.0))
-
+                    self._resetButton.setEnabled_(True)
+                    self._codeView.setTextColor_(self.white_color)
+                    pos = code.get_active_positions()
+                    i = 0
+                    while i < len(strcode):
+                        l = 1
+                        if i in pos:
+                            while i + l < len(strcode) and i + l in pos:
+                                l += 1
+                            self._codeView.setTextColor_range_(self.blue_color, NSMakeRange(i, l))
+                        elif strcode[i] == 'x':
+                            while i + l < len(strcode) and strcode[i + l] == 'x':
+                                l += 1
+                            self._codeView.setTextColor_range_(self.red_color, NSMakeRange(i, l))
+                        i += l
             else:
-                self._numberLabel.setTextColor_(NSColor.colorWithCalibratedRed_green_blue_alpha_(1.0, 1.0, 1.0, 1.0))
-                self._numberLabel.setStringValue_("Reading...")
+                self._codeView.setTextColor_(self.white_color)
+                self._codeView.setString_("Reading...")
                 self._resetButton.setEnabled_(False)
 
         if reschedule:
@@ -110,11 +132,11 @@ class ReaderController(NSWindowController):
     def cameraView(self):
         return self._cameraView
 
-    def setNumberLabel_(self, numberLabel):
-        self._numberLabel = numberLabel
+    def setCodeView_(self, codeView):
+        self._codeView = codeView
 
-    def numberLabel(self):
-        return self._numberLabel
+    def codeView(self):
+        return self._codeView
 
     def setResetButton_(self, resetButton):
         self._resetButton = resetButton
