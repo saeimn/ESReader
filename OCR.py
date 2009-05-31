@@ -89,11 +89,12 @@ def locate_code_box(image):
     """
     w = image.size[0]
     h = image.size[1]
-    data = image.getdata()
+    data = list(image.getdata())
 
     stat = ImageStat.Stat(image)
     mean = stat.mean[0]
     stddev = stat.stddev[0]
+    stddev2 = stddev / 2
 
     winsize = 10
     winsize2 = winsize*winsize
@@ -106,9 +107,8 @@ def locate_code_box(image):
         for x in range(0, w - winsize, winsize):
             wmean = 0
             for iy in range(y, y + winsize):
-                for ix in range(x, x + winsize):
-                    p = data[iy*w + ix]
-                    wmean += p
+                iywx = iy * w + x
+                wmean += sum(data[iywx:iywx + winsize])
             wmean /= winsize2
             if wmean > mean + stddev:
                 if x < x1:
@@ -196,15 +196,20 @@ def calculate_row_gradients(image, (x1, y1, x2, y2)):
     """
     w = image.size[0]
     h = image.size[1]
-    data = image.getdata()
+    data = list(image.getdata())
 
     mw = x2 - x1
     mh = y2 - y1
-    g = [0 for i in range(mh - 1)]
+
+    g = []
+    ynext = sum(data[y1*w + x1:y1*w + x2])
     for y in range(mh - 1):
-        for x in range(mw):
-            g[y] += (data[(y1 + y + 1)*w + x1 + x]
-                     - data[(y1 + y)*w + x1 + x])
+        yiw = (y1 + y + 1) * w
+        y = ynext
+        ynext = sum(data[yiw + x1 : yiw + x2])
+        dy = ynext - y
+        g.append(dy)
+
     return g
 
 
