@@ -138,7 +138,7 @@ class ReaderController(NSWindowController):
                 else:
                     self.performSelectorOnMainThread_withObject_waitUntilDone_(self.displayReadingState, None, True)
                 frame.release()
-            NSThread.sleepForTimeInterval_(0.5)
+            NSThread.sleepForTimeInterval_(0.3)
         loopPool.release()
         
 
