@@ -203,7 +203,7 @@ def calculate_row_gradients(image, (x1, y1, x2, y2)):
     g = [0 for i in range(mh - 1)]
     for y in range(mh - 1):
         for x in range(mw):
-            g[y] += (data[(y1 + y + 1)*w + x1 + x + 1]
+            g[y] += (data[(y1 + y + 1)*w + x1 + x]
                      - data[(y1 + y)*w + x1 + x])
     return g
 
