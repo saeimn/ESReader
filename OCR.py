@@ -31,8 +31,8 @@ def recognize(image):
         # search for string in the output
         result = None
         for l in string.split('\n'):
-            if l.count('x') < 5 and re.match('([x\d>\+]{7,20}| [x\d]{9}>){1,2}', l):
-                result = l[:-1]
+            if l.count('x') < 5 and re.search('[x\d>\+ ]{10}', l):
+                result = re.sub('([^\+]) +', '\1', l[:-1])
                 break
         
         return result
