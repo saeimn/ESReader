@@ -79,6 +79,51 @@ class Code:
         logfile.write("\ncode: " + str(self.code))
         logfile.flush()
 
+
+    def check(self):
+        code = self.code
+
+        if not re.match('^\d{13}>\d{27}\+ \d{9}>$', code):
+            return (1, None)
+
+        def checksum(n):
+            table = [0, 9, 4, 6, 8, 2, 7, 1, 3, 5, 
+                     9, 4, 6, 8, 2, 7, 1, 3, 5, 0, 
+                     4, 6, 8, 2, 7, 1, 3, 5, 0, 9, 
+                     6, 8, 2, 7, 1, 3, 5, 0, 9, 4, 
+                     8, 2, 7, 1, 3, 5, 0, 9, 4, 6, 
+                     2, 7, 1, 3, 5, 0, 9, 4, 6, 8, 
+                     7, 1, 3, 5, 0, 9, 4, 6, 8, 2, 
+                     1, 3, 5, 0, 9, 4, 6, 8, 2, 7, 
+                     3, 5, 0, 9, 4, 6, 8, 2, 7, 1, 
+                     5, 0, 9, 4, 6, 8, 2, 7, 1, 3]
+            s = 0
+            for i in range(len(n)):
+                c = int(n[i])
+                s = table[s*10 + c]
+            return (10 - s) % 10
+
+        bc = code[0:2]
+        if not re.match('01|03|04|11|14|21|23|31|33|[0123]x|x[134]$', bc):
+            return (2, "Illegal BC number")
+
+        amount = code[0:12]
+        amountc = int(code[12])
+        if checksum(amount) != amountc:
+            return (2, "Unrecognized amount number")
+        
+        ref = code[14:40]
+        refc = int(code[40])
+        if checksum(ref) != refc:
+            return (2, "Unrecognized reference number")
+        
+        account = code[43:51]
+        accountc = int(code[51])
+        if checksum(account) != accountc:
+            return (2, "Unrecognized account number")
+        
+        return (0, None)
+
         
     def get_active_positions(self):
         return self.active_positions

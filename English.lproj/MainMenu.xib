@@ -141,7 +141,7 @@
 						<object class="NSTextField" id="833972628">
 							<reference key="NSNextResponder" ref="271283694"/>
 							<int key="NSvFlags">298</int>
-							<string key="NSFrame">{{17, 176}, {478, 69}}</string>
+							<string key="NSFrame">{{-202, 202}, {916, 17}}</string>
 							<reference key="NSSuperview" ref="271283694"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<object class="NSShadow" key="NSViewShadow">
@@ -159,11 +159,7 @@
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">138413056</int>
 								<string key="NSContents">Message</string>
-								<object class="NSFont" key="NSSupport">
-									<string key="NSName">LucidaGrande</string>
-									<double key="NSSize">5.800000e+01</double>
-									<int key="NSfFlags">16</int>
-								</object>
+								<reference key="NSSupport" ref="965817668"/>
 								<reference key="NSControlView" ref="833972628"/>
 								<object class="NSColor" key="NSBackgroundColor">
 									<int key="NSColorSpace">6</int>
@@ -794,8 +790,8 @@
 							<reference ref="913163218"/>
 							<reference ref="876933612"/>
 							<reference ref="620775497"/>
-							<reference ref="1072619480"/>
 							<reference ref="710414693"/>
+							<reference ref="1072619480"/>
 							<reference ref="833972628"/>
 						</object>
 						<reference key="parent" ref="549696137"/>

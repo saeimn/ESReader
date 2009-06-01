@@ -78,7 +78,8 @@ class ReaderController(NSWindowController):
         # save as png and reopen with pil
         rep = image.representations().objectAtIndex_(0)
         data = rep.representationUsingType_properties_(NSPNGFileType, None)
-        f = mktemp() + '.png'
+        f = '/tmp/test.png'
+        #f = mktemp() + '.png'
         data.writeToFile_atomically_(f, False)
         return Image.open(f)
 
@@ -124,6 +125,17 @@ class ReaderController(NSWindowController):
             i += l
 
 
+    def displayErrorState(self, message):
+        strcode = str(self.code)
+        self._codeView.setString_(strcode)
+        self._codeView.setTextColor_(self.red_color)
+        self._resetButton.setEnabled_(True)
+        self._msgLabel.setStringValue_(message)
+        self._msgLabel.setHidden_(False)
+        self.active = False
+        self.frame = None
+
+
     def updateLoop(self):
         loopPool = NSAutoreleasePool.alloc().init()
         while True:
@@ -132,11 +144,15 @@ class ReaderController(NSWindowController):
             if frame:
                 frame.retain()
                 self.code = self.reader.process(self.nsimage2pil(frame))
+                (result, message) = self.code.check()
                 strcode = str(self.code)
-                if re.match('^\d{13}>\d{27}\+ \d{9}>$', strcode):
+                if result == 0:
                     self.performSelectorOnMainThread_withObject_waitUntilDone_(self.displayDoneState, None, True)
-                else:
+                elif result == 1:
                     self.performSelectorOnMainThread_withObject_waitUntilDone_(self.displayReadingState, None, True)
+                else:
+                    self.performSelectorOnMainThread_withObject_waitUntilDone_(self.displayErrorState, message, True)
+
                 frame.release()
             NSThread.sleepForTimeInterval_(0.3)
         loopPool.release()
