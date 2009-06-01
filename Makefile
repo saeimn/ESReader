@@ -22,7 +22,7 @@ $(GOCR_PRODUCT): $(GOCR_ARCHIVE)
 	mv gocr-build/bin/$(GOCR_PRODUCT) .
 	rm -rf gocr-build $(GOCR)
 
-app: gocr $(CSG).framework
+app: $(GOCR_PRODUCT) $(CSG_PRODUCT)
 	rm -rf build dist
 	$(PYTHON) setup.py py2app
 
