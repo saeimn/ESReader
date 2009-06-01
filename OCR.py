@@ -17,7 +17,7 @@ def recognize(image):
     """
     Perform OCR on a PIL image of a bill.
     
-    image -- The source image.
+    image -- The source PIL image.
 
     Returns the recognized text as string if any, None otherwise.
     """
@@ -41,6 +41,14 @@ def recognize(image):
     
 
 def preprocess(image):
+    """
+    Crop the image to the region containing the code and improve the
+    sharpness of the code.
+
+    image -- The source PIL image
+
+    Returns the preprocessed image or None on error.
+    """
     # convert image to B/W
     image = image.convert('L')
 
@@ -60,139 +68,111 @@ def preprocess(image):
 
 def crop_to_code(image):
     """
-    Crop an image of a bill to its code region.
+    Crop an image of a bill to the region that contains the code.
 
-    image -- The source image.
+    image -- The source PIL image.
 
     Returns the cropped PIL image if the region is found and None otherwise.
     """
-    (x1, y1, x2, y2) = locate_code_box(image)
-    (top, bottom) = calculate_text_yinsets(image, (x1, y1, x2, y2))
+    bounds = (0, 0, image.size[0], image.size[1])
+    ydiffs = calculate_row_diffs(image, bounds)
+    (x1, y1, x2, y2) = locate_code_global(ydiffs, bounds)
+    (x1, y1, x2, y2) = locate_code_local(ydiffs, (x1, y1, x2, y2))
 
     tolerance = 3
-    y1 = max(y1 + top - tolerance, 0)
-    y2 = min(y2 - bottom + tolerance, image.size[1])
+    y1 = max(y1 - tolerance, 0)
+    y2 = min(y2 + tolerance, image.size[1])
 
-    if x1 < x2 and y1 < y2:
+    if y1 < y2:
         return image.crop((x1, y1, x2, y2))
     else:
         return None
 
 
-def locate_code_box(image):
+def locate_code_global(ydiffs, (x1, y1, x2, y2)):
     """
-    Locate a light box in the image (which hopefully contains the code).
+    Locate the global region that contains the code.
 
-    image -- The source image.
+    Based on the row differences of the image, this function narrows
+    the bounds of the image to the region containing the code.
 
-    Returns the coordinates of the box in a tuple (x1, y1, x2, y2).
+    ydiffs - The list of the row differences of the image.
+    (x1, y1, x2, y2) - The coordinates of the image bounds.
+
+    Returns the coordinates of the bounds as tuple (x1, y1, x2, y2).
     """
-    w = image.size[0]
-    h = image.size[1]
-    data = list(image.getdata())
+    w = x2 - x1
+    h = y2 - y1
 
-    stat = ImageStat.Stat(image)
-    mean = stat.mean[0]
-    stddev = stat.stddev[0]
-    stddev2 = stddev / 2
+    y1 += h
+    y2 -= h
 
-    winsize = 10
-    winsize2 = winsize*winsize
-    x1 = w
-    y1 = h
-    x2 = 0
-    y2 = 0
-
-    for y in range(0, h - winsize, winsize):
-        for x in range(0, w - winsize, winsize):
-            wmean = 0
-            for iy in range(y, y + winsize):
-                iywx = iy * w + x
-                wmean += sum(data[iywx:iywx + winsize])
-            wmean /= winsize2
-            if wmean > mean + stddev:
-                if x < x1:
-                    x1 = x
-                if y < y1:
-                    y1 = y
-                if x + winsize > x2:
-                    x2 = x + winsize
-                if y + winsize > y2:
-                    y2 = y + winsize
-
-    if x1 >= x2:
-        x1 = 0
-        x2 = w
-
-    if y1 >= y2:
-        y1 = 0
-        y2 = h
+    dmin = min(ydiffs)
+    dmax = max(ydiffs)    
+    for y in range(h-1):
+        if ydiffs[y] == dmax or ydiffs[y] == dmin:
+            if y < y1:
+                y1 = y - 50
+            if y > y2:
+                y2 = y + 50
+            break
 
     return (x1, y1, x2, y2)
 
 
-def calculate_text_yinsets(image, (x1, y1, x2, y2)):
+def locate_code_local(ydiffs, (x1, y1, x2, y2)):
     """
-    Calculate the y insets of the text in an image with
-    light background and dark text.
-    
-    image -- The source image.
-    (x1, y1, x2, y2) -- The restricted image range.
+    Refine the bounds for the region that contains the code.
 
-    Returns the tuple with the insets (top, bottom).
+    Based on the row differences of the image, this function narrows
+    the bounds of the image to the region containing the code.
+
+    ydiffs - The list of the row differences of the image.
+    (x1, y1, x2, y2) - The coordinates of the image bounds.
+
+    Returns the coordinates of the bounds as tuple (x1, y1, x2, y2).
     """
-    g = calculate_row_gradients(image, (x1, y1, x2, y2))
+    d = ydiffs[y1:y2]
+    if not d:
+        return (x1, y1, x2, y2)
 
-    # cutoff the extrema on the border
-    cutoff = len(g) - 1
-    while g[cutoff] < 0:
-        cutoff -= 1
-    g = g[:cutoff]
-    
-    # find min, max, mean and stddev
-    gmax = max(g)
-    gmin = min(g)
-    mean = 0
-    mean2 = 0
-    for i in g:
-        mean += i
-        mean2 += i*i
-    mean /= len(g)
-    mean2 /= len(g)
+    d2 = map(lambda x : x * x, d)
+    dmin = min(d)
+    dmax = max(d)
+    mean = sum(d) / len(d)
+    mean2 = sum(d2) / len(d2)
     stddev = sqrt(mean2 - mean*mean)
     stddev2 = stddev / 2
 
     # find range for pattern tick down followed by tick up
     top = 0
-    bottom = len(g)
+    bottom = len(d)
     lastmin = -1
-    for i in range(len(g)):
-        if 2*g[i] > gmax: # tick up
+    for i in range(len(d)):
+        if 2*d[i] > dmax: # tick up
             if top > 0:
                 bottom = i
                 break
-        elif 2*g[i] < gmin: # tick down
+        elif 2*d[i] < dmin: # tick down
             top = i
 
     # grow range to not cutoff too much content
-    while top > 0 and g[top] < mean - stddev2:
+    while top > 0 and d[top] < mean - stddev2:
         top -= 1
-    while bottom < len(g) - 1 and g[bottom] > mean + stddev2:
+    while bottom < len(d) - 1 and d[bottom] > mean + stddev2:
         bottom += 1
 
-    bottom = len(g) - bottom - 1
-
-    return (top, bottom)
+    return (x1, y1 + top, x2, y1 + bottom)
         
 
-def calculate_row_gradients(image, (x1, y1, x2, y2)):
+def calculate_row_diffs(image, (x1, y1, x2, y2)):
     """
-    Calculate the mean gradient for each row in an image.
-    
-    image -- The source image.
-    (x1, y1, x2, y2) -- The restricted image range.
+    Calculate the differences of the average row values of an image.
 
-    Returns the gradient values as list (with size y2 - y1 - 1).
+    image -- The source PIL image.
+    (x1, y1, x2, y2) -- The coordinates of the image bounds.
+
+    Returns the differences values as list (with size y2 - y1 - 1).
     """
     w = image.size[0]
     h = image.size[1]
@@ -201,16 +181,16 @@ def calculate_row_gradients(image, (x1, y1, x2, y2)):
     mw = x2 - x1
     mh = y2 - y1
 
-    g = []
+    d = []
     ynext = sum(data[y1*w + x1:y1*w + x2])
     for y in range(mh - 1):
         yiw = (y1 + y + 1) * w
         y = ynext
         ynext = sum(data[yiw + x1 : yiw + x2])
         dy = ynext - y
-        g.append(dy)
+        d.append(dy)
 
-    return g
+    return d
 
 
 if __name__ == '__main__':
