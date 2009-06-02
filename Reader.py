@@ -105,22 +105,22 @@ class Code:
 
         bc = code[0:2]
         if not re.match('01|03|04|11|14|21|23|31|33|[0123]x|x[134]$', bc):
-            return (2, "Illegal BC number")
+            return (2, "BC number check failed")
 
         amount = code[0:12]
         amountc = int(code[12])
         if checksum(amount) != amountc:
-            return (2, "Unrecognized amount number")
+            return (2, "Amount check failed")
         
         ref = code[14:40]
         refc = int(code[40])
         if checksum(ref) != refc:
-            return (2, "Unrecognized reference number")
+            return (2, "Reference number check failed")
         
         account = code[43:51]
         accountc = int(code[51])
         if checksum(account) != accountc:
-            return (2, "Unrecognized account number")
+            return (2, "Account number check failed")
         
         return (0, None)
 
