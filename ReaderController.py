@@ -12,20 +12,33 @@ class CameraView(NSView):
 
     
     def drawRect_(self, rect):
-        if self._image:
-            # flip context horizontally
-            transform = NSAffineTransform.transform()
-            transform.translateXBy_yBy_(NSMaxX(rect), rect.origin.y)
-            transform.scaleXBy_yBy_(-1.0, 1.0)
-            transform.concat()
+         if self._image:
+             # flip context horizontally
+             transform = NSAffineTransform.transform()
+             transform.translateXBy_yBy_(NSMaxX(rect), rect.origin.y)
+             transform.scaleXBy_yBy_(-1.0, 1.0)
+             transform.concat()
 
-            self._image.drawInRect_fromRect_operation_fraction_(
-                rect, NSZeroRect, NSCompositeSourceOver, 1.0)
+             b = self.bounds()
+             w = self._image.size().width
+             h = self._image.size().height
+             source = NSMakeRect(
+                 (b.size.width - rect.size.width - rect.origin.x) * w / b.size.width,
+                 rect.origin.y * h / b.size.height,
+                 rect.size.width * w / b.size.width,
+                 rect.size.height * h / b.size.height)
+             dest = NSMakeRect(0, 0, rect.size.width, rect.size.height)
+
+             self._image.drawInRect_fromRect_operation_fraction_(
+                 dest, source, NSCompositeSourceOver, 1.0)
             
-            # revert transformation
-            transform.invert()
-            transform.concat()
+             # revert transformation
+             transform.invert()
+             transform.concat()
+         NSView.drawRect_(self, rect)
 
+    def isOpaque(self):
+        return True
 
     def setImage_(self, image):
         self._image = image
@@ -48,6 +61,8 @@ class ReaderController(NSWindowController):
         self.frame = None
         self.reader = Reader()
         self.code = None
+
+        self._cameraView.setImage_(None)
 
         self.camera = CSGCamera.alloc().init()
         self.camera.setDelegate_(self)
