@@ -256,4 +256,5 @@ if __name__ == '__main__':
     for f in fl:
         print 'Processing "' + f + '"... '
         image = Image.open(f)
-        print 'Code: ',  r.process(image)
+        code = r.process(image)
+        print 'Code: ', code

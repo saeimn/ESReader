@@ -23,8 +23,8 @@ def recognize(image):
     """
     image = preprocess(image)
     if image:
-        f = mktemp() + '.png'
-        image.save(f, 'PNG')
+        f = mktemp() + '.pbm'
+        image.save(f, 'PPM')
         string = getoutput(GOCR_CMD + (GOCR_ARGS % (GOCR_DATABASE, 2, f)))
         os.remove(f)
 
@@ -101,23 +101,22 @@ def locate_code_global(ydiffs, (x1, y1, x2, y2)):
 
     Returns the coordinates of the bounds as tuple (x1, y1, x2, y2).
     """
-    w = x2 - x1
-    h = y2 - y1
-
-    y1 += h
-    y2 -= h
-
-    dmin = min(ydiffs)
-    dmax = max(ydiffs)    
-    for y in range(h-1):
-        if ydiffs[y] == dmax or ydiffs[y] == dmin:
-            if y < y1:
-                y1 = y - 50
-            if y > y2:
-                y2 = y + 50
-            break
-
-    return (x1, y1, x2, y2)
+    d = ydiffs
+    deltamin2 = 20 / 2
+    deltamax2 = 40 / 2
+    
+    maxv = 0
+    maxy = 0
+    for y in range(deltamax2, len(d) - deltamax2):
+        v = 0
+        for delta in (deltamin2, deltamax2):
+            vi = d[y - delta] * d[y + delta]
+            if vi < v:
+                v = vi
+        if v < maxv:
+            maxv = v
+            maxy = y
+    return (x1, maxy - 80, x2, maxy + 80)
 
 
 def locate_code_local(ydiffs, (x1, y1, x2, y2)):
@@ -162,8 +161,8 @@ def locate_code_local(ydiffs, (x1, y1, x2, y2)):
     while bottom < len(d) - 1 and d[bottom] > mean + stddev2:
         bottom += 1
 
-    return (x1, y1 + top, x2, y1 + bottom)
-        
+    return (x1, y1 + top, x2, y1 + bottom)        
+
 
 def calculate_row_diffs(image, (x1, y1, x2, y2)):
     """
