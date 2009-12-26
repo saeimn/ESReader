@@ -1,0 +1,1551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77631A270C06C501005415CB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77631A260C06C501005415CB /* Python.framework */; };
+		77631A3F0C0748CF005415CB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 77631A3E0C0748CF005415CB /* main.py */; };
+		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F4367D39109B797C00912C41 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D38109B797C00912C41 /* QTKit.framework */; };
+		F4367D3D109B798300912C41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D3C109B798300912C41 /* Cocoa.framework */; };
+		F4367D87109B7F2700912C41 /* ISight.m in Sources */ = {isa = PBXBuildFile; fileRef = F4367D42109B79A700912C41 /* ISight.m */; };
+		F4367D8A109B7F4400912C41 /* iSight.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D33109B796A00912C41 /* iSight.framework */; };
+		F4367D90109B7F7900912C41 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D8F109B7F7900912C41 /* CoreVideo.framework */; };
+		F4367DAF109B813A00912C41 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367DAE109B813A00912C41 /* QuartzCore.framework */; };
+		F4367FA3109B852000912C41 /* PySight.py in Resources */ = {isa = PBXBuildFile; fileRef = F4367FA2109B852000912C41 /* PySight.py */; };
+		F48BCE8B108B53A200FF3C1A /* OCR.py in Resources */ = {isa = PBXBuildFile; fileRef = F48BCE87108B53A200FF3C1A /* OCR.py */; };
+		F48BCE8C108B53A200FF3C1A /* Reader.py in Resources */ = {isa = PBXBuildFile; fileRef = F48BCE88108B53A200FF3C1A /* Reader.py */; };
+		F48BCE8D108B53A200FF3C1A /* ReaderController.py in Resources */ = {isa = PBXBuildFile; fileRef = F48BCE89108B53A200FF3C1A /* ReaderController.py */; };
+		F48BCED0108B6B7500FF3C1A /* gocr in Resources */ = {isa = PBXBuildFile; fileRef = F48BCECF108B6B7500FF3C1A /* gocr */; };
+		F48BCF84108B6B8800FF3C1A /* db.lst in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED2108B6B8700FF3C1A /* db.lst */; };
+		F48BCF85108B6B8800FF3C1A /* db_002b_1243440004.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED3108B6B8700FF3C1A /* db_002b_1243440004.pbm */; };
+		F48BCF86108B6B8800FF3C1A /* db_002b_1243440031.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED4108B6B8700FF3C1A /* db_002b_1243440031.pbm */; };
+		F48BCF87108B6B8800FF3C1A /* db_002b_1243440042.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED5108B6B8700FF3C1A /* db_002b_1243440042.pbm */; };
+		F48BCF88108B6B8800FF3C1A /* db_002b_1243440073.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED6108B6B8700FF3C1A /* db_002b_1243440073.pbm */; };
+		F48BCF89108B6B8800FF3C1A /* db_002b_1243440117.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED7108B6B8700FF3C1A /* db_002b_1243440117.pbm */; };
+		F48BCF8A108B6B8800FF3C1A /* db_002b_1243440171.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED8108B6B8700FF3C1A /* db_002b_1243440171.pbm */; };
+		F48BCF8B108B6B8800FF3C1A /* db_002b_1243440194.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCED9108B6B8700FF3C1A /* db_002b_1243440194.pbm */; };
+		F48BCF8C108B6B8800FF3C1A /* db_002b_1243526145.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDA108B6B8700FF3C1A /* db_002b_1243526145.pbm */; };
+		F48BCF8D108B6B8800FF3C1A /* db_002b_1243527307.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDB108B6B8700FF3C1A /* db_002b_1243527307.pbm */; };
+		F48BCF8E108B6B8800FF3C1A /* db_002b_1243527334.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDC108B6B8700FF3C1A /* db_002b_1243527334.pbm */; };
+		F48BCF8F108B6B8800FF3C1A /* db_002b_1243527378.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDD108B6B8700FF3C1A /* db_002b_1243527378.pbm */; };
+		F48BCF90108B6B8800FF3C1A /* db_002b_1243527434.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDE108B6B8700FF3C1A /* db_002b_1243527434.pbm */; };
+		F48BCF91108B6B8800FF3C1A /* db_002b_1243527447.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEDF108B6B8700FF3C1A /* db_002b_1243527447.pbm */; };
+		F48BCF92108B6B8800FF3C1A /* db_002b_1243527461.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE0108B6B8700FF3C1A /* db_002b_1243527461.pbm */; };
+		F48BCF93108B6B8800FF3C1A /* db_002b_1243527477.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE1108B6B8700FF3C1A /* db_002b_1243527477.pbm */; };
+		F48BCF94108B6B8800FF3C1A /* db_002b_1243527592.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE2108B6B8700FF3C1A /* db_002b_1243527592.pbm */; };
+		F48BCF95108B6B8800FF3C1A /* db_002b_1243527598.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE3108B6B8700FF3C1A /* db_002b_1243527598.pbm */; };
+		F48BCF96108B6B8800FF3C1A /* db_002b_1243527602.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE4108B6B8700FF3C1A /* db_002b_1243527602.pbm */; };
+		F48BCF97108B6B8800FF3C1A /* db_002b_1243527616.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE5108B6B8700FF3C1A /* db_002b_1243527616.pbm */; };
+		F48BCF98108B6B8800FF3C1A /* db_002b_1243527630.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE6108B6B8700FF3C1A /* db_002b_1243527630.pbm */; };
+		F48BCF99108B6B8800FF3C1A /* db_002b_1243527637.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE7108B6B8700FF3C1A /* db_002b_1243527637.pbm */; };
+		F48BCF9A108B6B8800FF3C1A /* db_0030_1243439902.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE8108B6B8700FF3C1A /* db_0030_1243439902.pbm */; };
+		F48BCF9B108B6B8800FF3C1A /* db_0030_1243439972.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEE9108B6B8700FF3C1A /* db_0030_1243439972.pbm */; };
+		F48BCF9C108B6B8800FF3C1A /* db_0030_1243439996.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEEA108B6B8700FF3C1A /* db_0030_1243439996.pbm */; };
+		F48BCF9D108B6B8800FF3C1A /* db_0030_1243440033.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEEB108B6B8700FF3C1A /* db_0030_1243440033.pbm */; };
+		F48BCF9E108B6B8800FF3C1A /* db_0030_1243440044.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEEC108B6B8700FF3C1A /* db_0030_1243440044.pbm */; };
+		F48BCF9F108B6B8800FF3C1A /* db_0030_1243440075.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEED108B6B8700FF3C1A /* db_0030_1243440075.pbm */; };
+		F48BCFA0108B6B8800FF3C1A /* db_0030_1243440090.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEEE108B6B8700FF3C1A /* db_0030_1243440090.pbm */; };
+		F48BCFA1108B6B8800FF3C1A /* db_0030_1243440155.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEEF108B6B8700FF3C1A /* db_0030_1243440155.pbm */; };
+		F48BCFA2108B6B8800FF3C1A /* db_0030_1243440187.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF0108B6B8700FF3C1A /* db_0030_1243440187.pbm */; };
+		F48BCFA3108B6B8800FF3C1A /* db_0030_1243526144.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF1108B6B8700FF3C1A /* db_0030_1243526144.pbm */; };
+		F48BCFA4108B6B8800FF3C1A /* db_0030_1243527322.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF2108B6B8700FF3C1A /* db_0030_1243527322.pbm */; };
+		F48BCFA5108B6B8800FF3C1A /* db_0030_1243527325.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF3108B6B8700FF3C1A /* db_0030_1243527325.pbm */; };
+		F48BCFA6108B6B8800FF3C1A /* db_0030_1243527338.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF4108B6B8700FF3C1A /* db_0030_1243527338.pbm */; };
+		F48BCFA7108B6B8800FF3C1A /* db_0030_1243527440.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF5108B6B8700FF3C1A /* db_0030_1243527440.pbm */; };
+		F48BCFA8108B6B8800FF3C1A /* db_0030_1243527442.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF6108B6B8700FF3C1A /* db_0030_1243527442.pbm */; };
+		F48BCFA9108B6B8800FF3C1A /* db_0030_1243527455.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF7108B6B8700FF3C1A /* db_0030_1243527455.pbm */; };
+		F48BCFAA108B6B8800FF3C1A /* db_0030_1243527473.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF8108B6B8700FF3C1A /* db_0030_1243527473.pbm */; };
+		F48BCFAB108B6B8800FF3C1A /* db_0030_1243527496.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEF9108B6B8700FF3C1A /* db_0030_1243527496.pbm */; };
+		F48BCFAC108B6B8800FF3C1A /* db_0030_1243527499.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFA108B6B8700FF3C1A /* db_0030_1243527499.pbm */; };
+		F48BCFAD108B6B8800FF3C1A /* db_0030_1243527581.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFB108B6B8700FF3C1A /* db_0030_1243527581.pbm */; };
+		F48BCFAE108B6B8800FF3C1A /* db_0031_1243439908.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFC108B6B8700FF3C1A /* db_0031_1243439908.pbm */; };
+		F48BCFAF108B6B8800FF3C1A /* db_0031_1243439917.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFD108B6B8700FF3C1A /* db_0031_1243439917.pbm */; };
+		F48BCFB0108B6B8800FF3C1A /* db_0031_1243440001.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFE108B6B8700FF3C1A /* db_0031_1243440001.pbm */; };
+		F48BCFB1108B6B8800FF3C1A /* db_0031_1243440017.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCEFF108B6B8700FF3C1A /* db_0031_1243440017.pbm */; };
+		F48BCFB2108B6B8800FF3C1A /* db_0031_1243440069.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF00108B6B8700FF3C1A /* db_0031_1243440069.pbm */; };
+		F48BCFB3108B6B8800FF3C1A /* db_0031_1243440137.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF01108B6B8700FF3C1A /* db_0031_1243440137.pbm */; };
+		F48BCFB4108B6B8800FF3C1A /* db_0031_1243440180.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF02108B6B8700FF3C1A /* db_0031_1243440180.pbm */; };
+		F48BCFB5108B6B8800FF3C1A /* db_0031_1243440189.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF03108B6B8700FF3C1A /* db_0031_1243440189.pbm */; };
+		F48BCFB6108B6B8800FF3C1A /* db_0031_1243527303.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF04108B6B8700FF3C1A /* db_0031_1243527303.pbm */; };
+		F48BCFB7108B6B8800FF3C1A /* db_0031_1243527320.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF05108B6B8700FF3C1A /* db_0031_1243527320.pbm */; };
+		F48BCFB8108B6B8800FF3C1A /* db_0031_1243527335.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF06108B6B8700FF3C1A /* db_0031_1243527335.pbm */; };
+		F48BCFB9108B6B8800FF3C1A /* db_0031_1243527343.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF07108B6B8700FF3C1A /* db_0031_1243527343.pbm */; };
+		F48BCFBA108B6B8800FF3C1A /* db_0031_1243527344.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF08108B6B8700FF3C1A /* db_0031_1243527344.pbm */; };
+		F48BCFBB108B6B8800FF3C1A /* db_0031_1243527436.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF09108B6B8700FF3C1A /* db_0031_1243527436.pbm */; };
+		F48BCFBC108B6B8800FF3C1A /* db_0031_1243527443.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0A108B6B8700FF3C1A /* db_0031_1243527443.pbm */; };
+		F48BCFBD108B6B8800FF3C1A /* db_0031_1243527457.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0B108B6B8700FF3C1A /* db_0031_1243527457.pbm */; };
+		F48BCFBE108B6B8800FF3C1A /* db_0031_1243527458.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0C108B6B8700FF3C1A /* db_0031_1243527458.pbm */; };
+		F48BCFBF108B6B8800FF3C1A /* db_0031_1243527497.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0D108B6B8700FF3C1A /* db_0031_1243527497.pbm */; };
+		F48BCFC0108B6B8800FF3C1A /* db_0031_1243527529.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0E108B6B8700FF3C1A /* db_0031_1243527529.pbm */; };
+		F48BCFC1108B6B8800FF3C1A /* db_0031_1243527548.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF0F108B6B8700FF3C1A /* db_0031_1243527548.pbm */; };
+		F48BCFC2108B6B8800FF3C1A /* db_0031_1243527579.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF10108B6B8700FF3C1A /* db_0031_1243527579.pbm */; };
+		F48BCFC3108B6B8800FF3C1A /* db_0032_1243440054.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF11108B6B8700FF3C1A /* db_0032_1243440054.pbm */; };
+		F48BCFC4108B6B8800FF3C1A /* db_0032_1243527327.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF12108B6B8700FF3C1A /* db_0032_1243527327.pbm */; };
+		F48BCFC5108B6B8800FF3C1A /* db_0033_1243439913.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF13108B6B8700FF3C1A /* db_0033_1243439913.pbm */; };
+		F48BCFC6108B6B8800FF3C1A /* db_0033_1243439930.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF14108B6B8700FF3C1A /* db_0033_1243439930.pbm */; };
+		F48BCFC7108B6B8800FF3C1A /* db_0033_1243439991.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF15108B6B8700FF3C1A /* db_0033_1243439991.pbm */; };
+		F48BCFC8108B6B8800FF3C1A /* db_0034_1243439905.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF16108B6B8700FF3C1A /* db_0034_1243439905.pbm */; };
+		F48BCFC9108B6B8800FF3C1A /* db_0034_1243439914.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF17108B6B8700FF3C1A /* db_0034_1243439914.pbm */; };
+		F48BCFCA108B6B8800FF3C1A /* db_0034_1243439969.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF18108B6B8700FF3C1A /* db_0034_1243439969.pbm */; };
+		F48BCFCB108B6B8800FF3C1A /* db_0034_1243439977.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF19108B6B8700FF3C1A /* db_0034_1243439977.pbm */; };
+		F48BCFCC108B6B8800FF3C1A /* db_0034_1243439988.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1A108B6B8700FF3C1A /* db_0034_1243439988.pbm */; };
+		F48BCFCD108B6B8800FF3C1A /* db_0034_1243439990.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1B108B6B8700FF3C1A /* db_0034_1243439990.pbm */; };
+		F48BCFCE108B6B8800FF3C1A /* db_0034_1243439997.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1C108B6B8700FF3C1A /* db_0034_1243439997.pbm */; };
+		F48BCFCF108B6B8800FF3C1A /* db_0034_1243440020.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1D108B6B8700FF3C1A /* db_0034_1243440020.pbm */; };
+		F48BCFD0108B6B8800FF3C1A /* db_0034_1243440030.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1E108B6B8700FF3C1A /* db_0034_1243440030.pbm */; };
+		F48BCFD1108B6B8800FF3C1A /* db_0034_1243440035.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF1F108B6B8700FF3C1A /* db_0034_1243440035.pbm */; };
+		F48BCFD2108B6B8800FF3C1A /* db_0034_1243440045.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF20108B6B8700FF3C1A /* db_0034_1243440045.pbm */; };
+		F48BCFD3108B6B8800FF3C1A /* db_0034_1243440068.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF21108B6B8700FF3C1A /* db_0034_1243440068.pbm */; };
+		F48BCFD4108B6B8800FF3C1A /* db_0034_1243440078.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF22108B6B8700FF3C1A /* db_0034_1243440078.pbm */; };
+		F48BCFD5108B6B8800FF3C1A /* db_0034_1243440079.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF23108B6B8700FF3C1A /* db_0034_1243440079.pbm */; };
+		F48BCFD6108B6B8800FF3C1A /* db_0034_1243440095.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF24108B6B8700FF3C1A /* db_0034_1243440095.pbm */; };
+		F48BCFD7108B6B8800FF3C1A /* db_0034_1243440113.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF25108B6B8700FF3C1A /* db_0034_1243440113.pbm */; };
+		F48BCFD8108B6B8800FF3C1A /* db_0034_1243440169.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF26108B6B8700FF3C1A /* db_0034_1243440169.pbm */; };
+		F48BCFD9108B6B8800FF3C1A /* db_0034_1243527328.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF27108B6B8700FF3C1A /* db_0034_1243527328.pbm */; };
+		F48BCFDA108B6B8800FF3C1A /* db_0034_1243527437.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF28108B6B8700FF3C1A /* db_0034_1243527437.pbm */; };
+		F48BCFDB108B6B8800FF3C1A /* db_0034_1243527445.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF29108B6B8700FF3C1A /* db_0034_1243527445.pbm */; };
+		F48BCFDC108B6B8800FF3C1A /* db_0034_1243527468.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2A108B6B8700FF3C1A /* db_0034_1243527468.pbm */; };
+		F48BCFDD108B6B8800FF3C1A /* db_0034_1243527475.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2B108B6B8700FF3C1A /* db_0034_1243527475.pbm */; };
+		F48BCFDE108B6B8800FF3C1A /* db_0034_1243527531.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2C108B6B8700FF3C1A /* db_0034_1243527531.pbm */; };
+		F48BCFDF108B6B8800FF3C1A /* db_0034_1243527577.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2D108B6B8700FF3C1A /* db_0034_1243527577.pbm */; };
+		F48BCFE0108B6B8800FF3C1A /* db_0034_1243527580.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2E108B6B8700FF3C1A /* db_0034_1243527580.pbm */; };
+		F48BCFE1108B6B8800FF3C1A /* db_0034_1243527585.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF2F108B6B8700FF3C1A /* db_0034_1243527585.pbm */; };
+		F48BCFE2108B6B8800FF3C1A /* db_0034_1243527638.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF30108B6B8700FF3C1A /* db_0034_1243527638.pbm */; };
+		F48BCFE3108B6B8800FF3C1A /* db_0035_1243440002.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF31108B6B8700FF3C1A /* db_0035_1243440002.pbm */; };
+		F48BCFE4108B6B8800FF3C1A /* db_0035_1243440019.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF32108B6B8700FF3C1A /* db_0035_1243440019.pbm */; };
+		F48BCFE5108B6B8800FF3C1A /* db_0035_1243440059.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF33108B6B8700FF3C1A /* db_0035_1243440059.pbm */; };
+		F48BCFE6108B6B8800FF3C1A /* db_0035_1243440102.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF34108B6B8700FF3C1A /* db_0035_1243440102.pbm */; };
+		F48BCFE7108B6B8800FF3C1A /* db_0035_1243440114.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF35108B6B8700FF3C1A /* db_0035_1243440114.pbm */; };
+		F48BCFE8108B6B8800FF3C1A /* db_0035_1243440196.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF36108B6B8700FF3C1A /* db_0035_1243440196.pbm */; };
+		F48BCFE9108B6B8800FF3C1A /* db_0035_1243440198.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF37108B6B8700FF3C1A /* db_0035_1243440198.pbm */; };
+		F48BCFEA108B6B8800FF3C1A /* db_0035_1243526142.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF38108B6B8700FF3C1A /* db_0035_1243526142.pbm */; };
+		F48BCFEB108B6B8800FF3C1A /* db_0035_1243527283.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF39108B6B8700FF3C1A /* db_0035_1243527283.pbm */; };
+		F48BCFEC108B6B8800FF3C1A /* db_0035_1243527363.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3A108B6B8700FF3C1A /* db_0035_1243527363.pbm */; };
+		F48BCFED108B6B8800FF3C1A /* db_0035_1243527366.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3B108B6B8700FF3C1A /* db_0035_1243527366.pbm */; };
+		F48BCFEE108B6B8800FF3C1A /* db_0035_1243527444.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3C108B6B8700FF3C1A /* db_0035_1243527444.pbm */; };
+		F48BCFEF108B6B8800FF3C1A /* db_0035_1243527459.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3D108B6B8700FF3C1A /* db_0035_1243527459.pbm */; };
+		F48BCFF0108B6B8800FF3C1A /* db_0035_1243527462.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3E108B6B8700FF3C1A /* db_0035_1243527462.pbm */; };
+		F48BCFF1108B6B8800FF3C1A /* db_0035_1243527467.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF3F108B6B8700FF3C1A /* db_0035_1243527467.pbm */; };
+		F48BCFF2108B6B8800FF3C1A /* db_0035_1243527474.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF40108B6B8700FF3C1A /* db_0035_1243527474.pbm */; };
+		F48BCFF3108B6B8800FF3C1A /* db_0035_1243527479.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF41108B6B8700FF3C1A /* db_0035_1243527479.pbm */; };
+		F48BCFF4108B6B8800FF3C1A /* db_0035_1243527480.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF42108B6B8800FF3C1A /* db_0035_1243527480.pbm */; };
+		F48BCFF5108B6B8800FF3C1A /* db_0035_1243527611.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF43108B6B8800FF3C1A /* db_0035_1243527611.pbm */; };
+		F48BCFF6108B6B8800FF3C1A /* db_0035_1243527661.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF44108B6B8800FF3C1A /* db_0035_1243527661.pbm */; };
+		F48BCFF7108B6B8800FF3C1A /* db_0036_1243439909.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF45108B6B8800FF3C1A /* db_0036_1243439909.pbm */; };
+		F48BCFF8108B6B8800FF3C1A /* db_0036_1243439910.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF46108B6B8800FF3C1A /* db_0036_1243439910.pbm */; };
+		F48BCFF9108B6B8800FF3C1A /* db_0036_1243439968.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF47108B6B8800FF3C1A /* db_0036_1243439968.pbm */; };
+		F48BCFFA108B6B8800FF3C1A /* db_0036_1243439975.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF48108B6B8800FF3C1A /* db_0036_1243439975.pbm */; };
+		F48BCFFB108B6B8800FF3C1A /* db_0036_1243439976.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF49108B6B8800FF3C1A /* db_0036_1243439976.pbm */; };
+		F48BCFFC108B6B8800FF3C1A /* db_0036_1243439989.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4A108B6B8800FF3C1A /* db_0036_1243439989.pbm */; };
+		F48BCFFD108B6B8800FF3C1A /* db_0036_1243440018.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4B108B6B8800FF3C1A /* db_0036_1243440018.pbm */; };
+		F48BCFFE108B6B8800FF3C1A /* db_0036_1243440058.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4C108B6B8800FF3C1A /* db_0036_1243440058.pbm */; };
+		F48BCFFF108B6B8800FF3C1A /* db_0036_1243440070.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4D108B6B8800FF3C1A /* db_0036_1243440070.pbm */; };
+		F48BD000108B6B8800FF3C1A /* db_0036_1243440071.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4E108B6B8800FF3C1A /* db_0036_1243440071.pbm */; };
+		F48BD001108B6B8800FF3C1A /* db_0036_1243440082.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF4F108B6B8800FF3C1A /* db_0036_1243440082.pbm */; };
+		F48BD002108B6B8800FF3C1A /* db_0036_1243440099.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF50108B6B8800FF3C1A /* db_0036_1243440099.pbm */; };
+		F48BD003108B6B8800FF3C1A /* db_0036_1243440100.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF51108B6B8800FF3C1A /* db_0036_1243440100.pbm */; };
+		F48BD004108B6B8800FF3C1A /* db_0036_1243440107.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF52108B6B8800FF3C1A /* db_0036_1243440107.pbm */; };
+		F48BD005108B6B8800FF3C1A /* db_0036_1243440108.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF53108B6B8800FF3C1A /* db_0036_1243440108.pbm */; };
+		F48BD006108B6B8800FF3C1A /* db_0036_1243440112.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF54108B6B8800FF3C1A /* db_0036_1243440112.pbm */; };
+		F48BD007108B6B8800FF3C1A /* db_0036_1243440115.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF55108B6B8800FF3C1A /* db_0036_1243440115.pbm */; };
+		F48BD008108B6B8800FF3C1A /* db_0036_1243440123.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF56108B6B8800FF3C1A /* db_0036_1243440123.pbm */; };
+		F48BD009108B6B8800FF3C1A /* db_0036_1243440130.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF57108B6B8800FF3C1A /* db_0036_1243440130.pbm */; };
+		F48BD00A108B6B8800FF3C1A /* db_0036_1243440179.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF58108B6B8800FF3C1A /* db_0036_1243440179.pbm */; };
+		F48BD00B108B6B8800FF3C1A /* db_0036_1243527323.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF59108B6B8800FF3C1A /* db_0036_1243527323.pbm */; };
+		F48BD00C108B6B8800FF3C1A /* db_0036_1243527513.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5A108B6B8800FF3C1A /* db_0036_1243527513.pbm */; };
+		F48BD00D108B6B8800FF3C1A /* db_0036_1243527586.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5B108B6B8800FF3C1A /* db_0036_1243527586.pbm */; };
+		F48BD00E108B6B8800FF3C1A /* db_0036_1243527591.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5C108B6B8800FF3C1A /* db_0036_1243527591.pbm */; };
+		F48BD00F108B6B8800FF3C1A /* db_0036_1243527596.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5D108B6B8800FF3C1A /* db_0036_1243527596.pbm */; };
+		F48BD010108B6B8800FF3C1A /* db_0036_1243527614.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5E108B6B8800FF3C1A /* db_0036_1243527614.pbm */; };
+		F48BD011108B6B8800FF3C1A /* db_0036_1243527660.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF5F108B6B8800FF3C1A /* db_0036_1243527660.pbm */; };
+		F48BD012108B6B8800FF3C1A /* db_0037_1243439926.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF60108B6B8800FF3C1A /* db_0037_1243439926.pbm */; };
+		F48BD013108B6B8800FF3C1A /* db_0037_1243440158.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF61108B6B8800FF3C1A /* db_0037_1243440158.pbm */; };
+		F48BD014108B6B8800FF3C1A /* db_0038_1243527340.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF62108B6B8800FF3C1A /* db_0038_1243527340.pbm */; };
+		F48BD015108B6B8800FF3C1A /* db_0038_1243527588.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF63108B6B8800FF3C1A /* db_0038_1243527588.pbm */; };
+		F48BD016108B6B8800FF3C1A /* db_0039_1243439904.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF64108B6B8800FF3C1A /* db_0039_1243439904.pbm */; };
+		F48BD017108B6B8800FF3C1A /* db_0039_1243440066.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF65108B6B8800FF3C1A /* db_0039_1243440066.pbm */; };
+		F48BD018108B6B8800FF3C1A /* db_0039_1243440077.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF66108B6B8800FF3C1A /* db_0039_1243440077.pbm */; };
+		F48BD019108B6B8800FF3C1A /* db_0039_1243440094.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF67108B6B8800FF3C1A /* db_0039_1243440094.pbm */; };
+		F48BD01A108B6B8800FF3C1A /* db_0039_1243440109.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF68108B6B8800FF3C1A /* db_0039_1243440109.pbm */; };
+		F48BD01B108B6B8800FF3C1A /* db_0039_1243440135.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF69108B6B8800FF3C1A /* db_0039_1243440135.pbm */; };
+		F48BD01C108B6B8800FF3C1A /* db_0039_1243440168.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6A108B6B8800FF3C1A /* db_0039_1243440168.pbm */; };
+		F48BD01D108B6B8800FF3C1A /* db_0039_1243527330.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6B108B6B8800FF3C1A /* db_0039_1243527330.pbm */; };
+		F48BD01E108B6B8800FF3C1A /* db_0039_1243527492.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6C108B6B8800FF3C1A /* db_0039_1243527492.pbm */; };
+		F48BD01F108B6B8800FF3C1A /* db_0039_1243527589.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6D108B6B8800FF3C1A /* db_0039_1243527589.pbm */; };
+		F48BD020108B6B8800FF3C1A /* db_0039_1243527613.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6E108B6B8800FF3C1A /* db_0039_1243527613.pbm */; };
+		F48BD021108B6B8800FF3C1A /* db_003e_1243439999.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF6F108B6B8800FF3C1A /* db_003e_1243439999.pbm */; };
+		F48BD022108B6B8800FF3C1A /* db_003e_1243440010.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF70108B6B8800FF3C1A /* db_003e_1243440010.pbm */; };
+		F48BD023108B6B8800FF3C1A /* db_003e_1243440028.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF71108B6B8800FF3C1A /* db_003e_1243440028.pbm */; };
+		F48BD024108B6B8800FF3C1A /* db_003e_1243440036.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF72108B6B8800FF3C1A /* db_003e_1243440036.pbm */; };
+		F48BD025108B6B8800FF3C1A /* db_003e_1243440041.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF73108B6B8800FF3C1A /* db_003e_1243440041.pbm */; };
+		F48BD026108B6B8800FF3C1A /* db_003e_1243440047.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF74108B6B8800FF3C1A /* db_003e_1243440047.pbm */; };
+		F48BD027108B6B8800FF3C1A /* db_003e_1243440098.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF75108B6B8800FF3C1A /* db_003e_1243440098.pbm */; };
+		F48BD028108B6B8800FF3C1A /* db_003e_1243440120.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF76108B6B8800FF3C1A /* db_003e_1243440120.pbm */; };
+		F48BD029108B6B8800FF3C1A /* db_003e_1243440126.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF77108B6B8800FF3C1A /* db_003e_1243440126.pbm */; };
+		F48BD02A108B6B8800FF3C1A /* db_003e_1243440154.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF78108B6B8800FF3C1A /* db_003e_1243440154.pbm */; };
+		F48BD02B108B6B8800FF3C1A /* db_003e_1243440185.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF79108B6B8800FF3C1A /* db_003e_1243440185.pbm */; };
+		F48BD02C108B6B8800FF3C1A /* db_003e_1243527345.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7A108B6B8800FF3C1A /* db_003e_1243527345.pbm */; };
+		F48BD02D108B6B8800FF3C1A /* db_003e_1243527449.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7B108B6B8800FF3C1A /* db_003e_1243527449.pbm */; };
+		F48BD02E108B6B8800FF3C1A /* db_003e_1243527464.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7C108B6B8800FF3C1A /* db_003e_1243527464.pbm */; };
+		F48BD02F108B6B8800FF3C1A /* db_003e_1243527483.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7D108B6B8800FF3C1A /* db_003e_1243527483.pbm */; };
+		F48BD030108B6B8800FF3C1A /* db_003e_1243527485.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7E108B6B8800FF3C1A /* db_003e_1243527485.pbm */; };
+		F48BD031108B6B8800FF3C1A /* db_003e_1243527490.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF7F108B6B8800FF3C1A /* db_003e_1243527490.pbm */; };
+		F48BD032108B6B8800FF3C1A /* db_003e_1243527528.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF80108B6B8800FF3C1A /* db_003e_1243527528.pbm */; };
+		F48BD033108B6B8800FF3C1A /* db_003e_1243527594.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF81108B6B8800FF3C1A /* db_003e_1243527594.pbm */; };
+		F48BD034108B6B8800FF3C1A /* db_003e_1243527634.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF82108B6B8800FF3C1A /* db_003e_1243527634.pbm */; };
+		F48BD035108B6B8800FF3C1A /* db_003e_1243527640.pbm in Copy Database */ = {isa = PBXBuildFile; fileRef = F48BCF83108B6B8800FF3C1A /* db_003e_1243527640.pbm */; };
+		F49FB5A8109CFD8A00E0C038 /* __init__.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB4FD109CFD3100E0C038 /* __init__.py */; };
+		F49FB5A9109CFD8A00E0C038 /* _imaging.so in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB4FE109CFD3100E0C038 /* _imaging.so */; };
+		F49FB5AB109CFD8A00E0C038 /* _imagingmath.so in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB500109CFD3100E0C038 /* _imagingmath.so */; };
+		F49FB5AC109CFD8A00E0C038 /* _imagingtk.so in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB501109CFD3100E0C038 /* _imagingtk.so */; };
+		F49FB5AD109CFD8A00E0C038 /* ArgImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB502109CFD3100E0C038 /* ArgImagePlugin.py */; };
+		F49FB5AE109CFD8A00E0C038 /* BdfFontFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB503109CFD3100E0C038 /* BdfFontFile.py */; };
+		F49FB5AF109CFD8A00E0C038 /* BmpImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB504109CFD3100E0C038 /* BmpImagePlugin.py */; };
+		F49FB5B0109CFD8A00E0C038 /* BufrStubImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB505109CFD3100E0C038 /* BufrStubImagePlugin.py */; };
+		F49FB5B1109CFD8A00E0C038 /* ContainerIO.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB506109CFD3100E0C038 /* ContainerIO.py */; };
+		F49FB5B2109CFD8A00E0C038 /* CurImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB507109CFD3100E0C038 /* CurImagePlugin.py */; };
+		F49FB5B3109CFD8A00E0C038 /* DcxImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB508109CFD3100E0C038 /* DcxImagePlugin.py */; };
+		F49FB5B4109CFD8A00E0C038 /* EpsImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB509109CFD3100E0C038 /* EpsImagePlugin.py */; };
+		F49FB5B5109CFD8A00E0C038 /* ExifTags.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50A109CFD3100E0C038 /* ExifTags.py */; };
+		F49FB5B6109CFD8A00E0C038 /* FitsStubImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50B109CFD3100E0C038 /* FitsStubImagePlugin.py */; };
+		F49FB5B7109CFD8A00E0C038 /* FliImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50C109CFD3100E0C038 /* FliImagePlugin.py */; };
+		F49FB5B8109CFD8A00E0C038 /* FontFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50D109CFD3100E0C038 /* FontFile.py */; };
+		F49FB5B9109CFD8A00E0C038 /* FpxImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50E109CFD3100E0C038 /* FpxImagePlugin.py */; };
+		F49FB5BA109CFD8A00E0C038 /* GbrImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB50F109CFD3100E0C038 /* GbrImagePlugin.py */; };
+		F49FB5BB109CFD8A00E0C038 /* GdImageFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB510109CFD3100E0C038 /* GdImageFile.py */; };
+		F49FB5BC109CFD8A00E0C038 /* GifImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB511109CFD3100E0C038 /* GifImagePlugin.py */; };
+		F49FB5BD109CFD8A00E0C038 /* GimpGradientFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB512109CFD3100E0C038 /* GimpGradientFile.py */; };
+		F49FB5BE109CFD8A00E0C038 /* GimpPaletteFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB513109CFD3100E0C038 /* GimpPaletteFile.py */; };
+		F49FB5BF109CFD8A00E0C038 /* GribStubImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB514109CFD3100E0C038 /* GribStubImagePlugin.py */; };
+		F49FB5C0109CFD8A00E0C038 /* Hdf5StubImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB515109CFD3100E0C038 /* Hdf5StubImagePlugin.py */; };
+		F49FB5C1109CFD8A00E0C038 /* IcnsImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB516109CFD3100E0C038 /* IcnsImagePlugin.py */; };
+		F49FB5C2109CFD8A00E0C038 /* IcoImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB517109CFD3100E0C038 /* IcoImagePlugin.py */; };
+		F49FB5C3109CFD8A00E0C038 /* Image.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB518109CFD3100E0C038 /* Image.py */; };
+		F49FB5C4109CFD8A00E0C038 /* ImageChops.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB519109CFD3100E0C038 /* ImageChops.py */; };
+		F49FB5C5109CFD8A00E0C038 /* ImageColor.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51A109CFD3100E0C038 /* ImageColor.py */; };
+		F49FB5C6109CFD8A00E0C038 /* ImageDraw.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51B109CFD3100E0C038 /* ImageDraw.py */; };
+		F49FB5C7109CFD8A00E0C038 /* ImageDraw2.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51C109CFD3100E0C038 /* ImageDraw2.py */; };
+		F49FB5C8109CFD8A00E0C038 /* ImageEnhance.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51D109CFD3100E0C038 /* ImageEnhance.py */; };
+		F49FB5C9109CFD8A00E0C038 /* ImageFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51E109CFD3100E0C038 /* ImageFile.py */; };
+		F49FB5CA109CFD8A00E0C038 /* ImageFileIO.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB51F109CFD3100E0C038 /* ImageFileIO.py */; };
+		F49FB5CB109CFD8A00E0C038 /* ImageFilter.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB520109CFD3100E0C038 /* ImageFilter.py */; };
+		F49FB5CC109CFD8A00E0C038 /* ImageFont.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB521109CFD3100E0C038 /* ImageFont.py */; };
+		F49FB5CD109CFD8A00E0C038 /* ImageGL.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB522109CFD3100E0C038 /* ImageGL.py */; };
+		F49FB5CE109CFD8A00E0C038 /* ImageGrab.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB523109CFD3100E0C038 /* ImageGrab.py */; };
+		F49FB5CF109CFD8A00E0C038 /* ImageMath.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB524109CFD3100E0C038 /* ImageMath.py */; };
+		F49FB5D0109CFD8A00E0C038 /* ImageMode.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB525109CFD3100E0C038 /* ImageMode.py */; };
+		F49FB5D1109CFD8A00E0C038 /* ImageOps.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB526109CFD3100E0C038 /* ImageOps.py */; };
+		F49FB5D2109CFD8A00E0C038 /* ImagePalette.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB527109CFD3100E0C038 /* ImagePalette.py */; };
+		F49FB5D3109CFD8A00E0C038 /* ImagePath.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB528109CFD3100E0C038 /* ImagePath.py */; };
+		F49FB5D4109CFD8A00E0C038 /* ImageQt.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB529109CFD3100E0C038 /* ImageQt.py */; };
+		F49FB5D5109CFD8A00E0C038 /* ImageSequence.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52A109CFD3100E0C038 /* ImageSequence.py */; };
+		F49FB5D6109CFD8A00E0C038 /* ImageStat.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52B109CFD3100E0C038 /* ImageStat.py */; };
+		F49FB5D7109CFD8A00E0C038 /* ImageTk.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52C109CFD3100E0C038 /* ImageTk.py */; };
+		F49FB5D8109CFD8A00E0C038 /* ImageTransform.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52D109CFD3100E0C038 /* ImageTransform.py */; };
+		F49FB5D9109CFD8A00E0C038 /* ImageWin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52E109CFD3100E0C038 /* ImageWin.py */; };
+		F49FB5DA109CFD8A00E0C038 /* ImImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB52F109CFD3100E0C038 /* ImImagePlugin.py */; };
+		F49FB5DB109CFD8A00E0C038 /* ImtImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB530109CFD3100E0C038 /* ImtImagePlugin.py */; };
+		F49FB5DC109CFD8A00E0C038 /* IptcImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB531109CFD3100E0C038 /* IptcImagePlugin.py */; };
+		F49FB5DD109CFD8A00E0C038 /* JpegImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB532109CFD3100E0C038 /* JpegImagePlugin.py */; };
+		F49FB5DE109CFD8A00E0C038 /* McIdasImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB533109CFD3100E0C038 /* McIdasImagePlugin.py */; };
+		F49FB5DF109CFD8A00E0C038 /* MicImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB534109CFD3100E0C038 /* MicImagePlugin.py */; };
+		F49FB5E0109CFD8A00E0C038 /* MpegImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB535109CFD3100E0C038 /* MpegImagePlugin.py */; };
+		F49FB5E1109CFD8A00E0C038 /* MspImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB536109CFD3100E0C038 /* MspImagePlugin.py */; };
+		F49FB5E2109CFD8A00E0C038 /* OleFileIO.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB537109CFD3100E0C038 /* OleFileIO.py */; };
+		F49FB5E3109CFD8A00E0C038 /* PaletteFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB538109CFD3100E0C038 /* PaletteFile.py */; };
+		F49FB5E4109CFD8A00E0C038 /* PalmImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB539109CFD3100E0C038 /* PalmImagePlugin.py */; };
+		F49FB5E5109CFD8A00E0C038 /* PcdImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB53A109CFD3100E0C038 /* PcdImagePlugin.py */; };
+		F49FB5E6109CFD8A00E0C038 /* PcfFontFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB53B109CFD3100E0C038 /* PcfFontFile.py */; };
+		F49FB5E7109CFD8A00E0C038 /* PcxImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB53C109CFD3100E0C038 /* PcxImagePlugin.py */; };
+		F49FB5E8109CFD8A00E0C038 /* PdfImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB53D109CFD3100E0C038 /* PdfImagePlugin.py */; };
+		F49FB5EA109CFD8A00E0C038 /* PixarImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB53F109CFD3100E0C038 /* PixarImagePlugin.py */; };
+		F49FB5EB109CFD8A00E0C038 /* PngImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB540109CFD3100E0C038 /* PngImagePlugin.py */; };
+		F49FB5EC109CFD8A00E0C038 /* PpmImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB541109CFD3100E0C038 /* PpmImagePlugin.py */; };
+		F49FB5ED109CFD8A00E0C038 /* PsdImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB542109CFD3100E0C038 /* PsdImagePlugin.py */; };
+		F49FB5EE109CFD8A00E0C038 /* PSDraw.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB543109CFD3100E0C038 /* PSDraw.py */; };
+		F49FB5EF109CFD8A00E0C038 /* SgiImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB544109CFD3100E0C038 /* SgiImagePlugin.py */; };
+		F49FB5F0109CFD8A00E0C038 /* SpiderImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB545109CFD3100E0C038 /* SpiderImagePlugin.py */; };
+		F49FB5F1109CFD8A00E0C038 /* SunImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB546109CFD3100E0C038 /* SunImagePlugin.py */; };
+		F49FB5F2109CFD8A00E0C038 /* TarIO.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB547109CFD3100E0C038 /* TarIO.py */; };
+		F49FB5F3109CFD8A00E0C038 /* TgaImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB548109CFD3100E0C038 /* TgaImagePlugin.py */; };
+		F49FB5F4109CFD8A00E0C038 /* TiffImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB549109CFD3100E0C038 /* TiffImagePlugin.py */; };
+		F49FB5F5109CFD8A00E0C038 /* TiffTags.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54A109CFD3100E0C038 /* TiffTags.py */; };
+		F49FB5F6109CFD8A00E0C038 /* WalImageFile.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54B109CFD3100E0C038 /* WalImageFile.py */; };
+		F49FB5F7109CFD8A00E0C038 /* WmfImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54C109CFD3100E0C038 /* WmfImagePlugin.py */; };
+		F49FB5F8109CFD8A00E0C038 /* XbmImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54D109CFD3100E0C038 /* XbmImagePlugin.py */; };
+		F49FB5F9109CFD8A00E0C038 /* XpmImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54E109CFD3100E0C038 /* XpmImagePlugin.py */; };
+		F49FB5FA109CFD8A00E0C038 /* XVThumbImagePlugin.py in Copy PIL */ = {isa = PBXBuildFile; fileRef = F49FB54F109CFD3100E0C038 /* XVThumbImagePlugin.py */; };
+		F4B1A943109CFA6D000788BE /* logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4B1A942109CFA6D000788BE /* logo.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4367D88109B7F3F00912C41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4367D32109B796A00912C41;
+			remoteInfo = iSight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4367F74109B832500912C41 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4367D8A109B7F4400912C41 /* iSight.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49100B1108B839400CA1302 /* Copy Database */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = database;
+			dstSubfolderSpec = 7;
+			files = (
+				F48BCF84108B6B8800FF3C1A /* db.lst in Copy Database */,
+				F48BCF85108B6B8800FF3C1A /* db_002b_1243440004.pbm in Copy Database */,
+				F48BCF86108B6B8800FF3C1A /* db_002b_1243440031.pbm in Copy Database */,
+				F48BCF87108B6B8800FF3C1A /* db_002b_1243440042.pbm in Copy Database */,
+				F48BCF88108B6B8800FF3C1A /* db_002b_1243440073.pbm in Copy Database */,
+				F48BCF89108B6B8800FF3C1A /* db_002b_1243440117.pbm in Copy Database */,
+				F48BCF8A108B6B8800FF3C1A /* db_002b_1243440171.pbm in Copy Database */,
+				F48BCF8B108B6B8800FF3C1A /* db_002b_1243440194.pbm in Copy Database */,
+				F48BCF8C108B6B8800FF3C1A /* db_002b_1243526145.pbm in Copy Database */,
+				F48BCF8D108B6B8800FF3C1A /* db_002b_1243527307.pbm in Copy Database */,
+				F48BCF8E108B6B8800FF3C1A /* db_002b_1243527334.pbm in Copy Database */,
+				F48BCF8F108B6B8800FF3C1A /* db_002b_1243527378.pbm in Copy Database */,
+				F48BCF90108B6B8800FF3C1A /* db_002b_1243527434.pbm in Copy Database */,
+				F48BCF91108B6B8800FF3C1A /* db_002b_1243527447.pbm in Copy Database */,
+				F48BCF92108B6B8800FF3C1A /* db_002b_1243527461.pbm in Copy Database */,
+				F48BCF93108B6B8800FF3C1A /* db_002b_1243527477.pbm in Copy Database */,
+				F48BCF94108B6B8800FF3C1A /* db_002b_1243527592.pbm in Copy Database */,
+				F48BCF95108B6B8800FF3C1A /* db_002b_1243527598.pbm in Copy Database */,
+				F48BCF96108B6B8800FF3C1A /* db_002b_1243527602.pbm in Copy Database */,
+				F48BCF97108B6B8800FF3C1A /* db_002b_1243527616.pbm in Copy Database */,
+				F48BCF98108B6B8800FF3C1A /* db_002b_1243527630.pbm in Copy Database */,
+				F48BCF99108B6B8800FF3C1A /* db_002b_1243527637.pbm in Copy Database */,
+				F48BCF9A108B6B8800FF3C1A /* db_0030_1243439902.pbm in Copy Database */,
+				F48BCF9B108B6B8800FF3C1A /* db_0030_1243439972.pbm in Copy Database */,
+				F48BCF9C108B6B8800FF3C1A /* db_0030_1243439996.pbm in Copy Database */,
+				F48BCF9D108B6B8800FF3C1A /* db_0030_1243440033.pbm in Copy Database */,
+				F48BCF9E108B6B8800FF3C1A /* db_0030_1243440044.pbm in Copy Database */,
+				F48BCF9F108B6B8800FF3C1A /* db_0030_1243440075.pbm in Copy Database */,
+				F48BCFA0108B6B8800FF3C1A /* db_0030_1243440090.pbm in Copy Database */,
+				F48BCFA1108B6B8800FF3C1A /* db_0030_1243440155.pbm in Copy Database */,
+				F48BCFA2108B6B8800FF3C1A /* db_0030_1243440187.pbm in Copy Database */,
+				F48BCFA3108B6B8800FF3C1A /* db_0030_1243526144.pbm in Copy Database */,
+				F48BCFA4108B6B8800FF3C1A /* db_0030_1243527322.pbm in Copy Database */,
+				F48BCFA5108B6B8800FF3C1A /* db_0030_1243527325.pbm in Copy Database */,
+				F48BCFA6108B6B8800FF3C1A /* db_0030_1243527338.pbm in Copy Database */,
+				F48BCFA7108B6B8800FF3C1A /* db_0030_1243527440.pbm in Copy Database */,
+				F48BCFA8108B6B8800FF3C1A /* db_0030_1243527442.pbm in Copy Database */,
+				F48BCFA9108B6B8800FF3C1A /* db_0030_1243527455.pbm in Copy Database */,
+				F48BCFAA108B6B8800FF3C1A /* db_0030_1243527473.pbm in Copy Database */,
+				F48BCFAB108B6B8800FF3C1A /* db_0030_1243527496.pbm in Copy Database */,
+				F48BCFAC108B6B8800FF3C1A /* db_0030_1243527499.pbm in Copy Database */,
+				F48BCFAD108B6B8800FF3C1A /* db_0030_1243527581.pbm in Copy Database */,
+				F48BCFAE108B6B8800FF3C1A /* db_0031_1243439908.pbm in Copy Database */,
+				F48BCFAF108B6B8800FF3C1A /* db_0031_1243439917.pbm in Copy Database */,
+				F48BCFB0108B6B8800FF3C1A /* db_0031_1243440001.pbm in Copy Database */,
+				F48BCFB1108B6B8800FF3C1A /* db_0031_1243440017.pbm in Copy Database */,
+				F48BCFB2108B6B8800FF3C1A /* db_0031_1243440069.pbm in Copy Database */,
+				F48BCFB3108B6B8800FF3C1A /* db_0031_1243440137.pbm in Copy Database */,
+				F48BCFB4108B6B8800FF3C1A /* db_0031_1243440180.pbm in Copy Database */,
+				F48BCFB5108B6B8800FF3C1A /* db_0031_1243440189.pbm in Copy Database */,
+				F48BCFB6108B6B8800FF3C1A /* db_0031_1243527303.pbm in Copy Database */,
+				F48BCFB7108B6B8800FF3C1A /* db_0031_1243527320.pbm in Copy Database */,
+				F48BCFB8108B6B8800FF3C1A /* db_0031_1243527335.pbm in Copy Database */,
+				F48BCFB9108B6B8800FF3C1A /* db_0031_1243527343.pbm in Copy Database */,
+				F48BCFBA108B6B8800FF3C1A /* db_0031_1243527344.pbm in Copy Database */,
+				F48BCFBB108B6B8800FF3C1A /* db_0031_1243527436.pbm in Copy Database */,
+				F48BCFBC108B6B8800FF3C1A /* db_0031_1243527443.pbm in Copy Database */,
+				F48BCFBD108B6B8800FF3C1A /* db_0031_1243527457.pbm in Copy Database */,
+				F48BCFBE108B6B8800FF3C1A /* db_0031_1243527458.pbm in Copy Database */,
+				F48BCFBF108B6B8800FF3C1A /* db_0031_1243527497.pbm in Copy Database */,
+				F48BCFC0108B6B8800FF3C1A /* db_0031_1243527529.pbm in Copy Database */,
+				F48BCFC1108B6B8800FF3C1A /* db_0031_1243527548.pbm in Copy Database */,
+				F48BCFC2108B6B8800FF3C1A /* db_0031_1243527579.pbm in Copy Database */,
+				F48BCFC3108B6B8800FF3C1A /* db_0032_1243440054.pbm in Copy Database */,
+				F48BCFC4108B6B8800FF3C1A /* db_0032_1243527327.pbm in Copy Database */,
+				F48BCFC5108B6B8800FF3C1A /* db_0033_1243439913.pbm in Copy Database */,
+				F48BCFC6108B6B8800FF3C1A /* db_0033_1243439930.pbm in Copy Database */,
+				F48BCFC7108B6B8800FF3C1A /* db_0033_1243439991.pbm in Copy Database */,
+				F48BCFC8108B6B8800FF3C1A /* db_0034_1243439905.pbm in Copy Database */,
+				F48BCFC9108B6B8800FF3C1A /* db_0034_1243439914.pbm in Copy Database */,
+				F48BCFCA108B6B8800FF3C1A /* db_0034_1243439969.pbm in Copy Database */,
+				F48BCFCB108B6B8800FF3C1A /* db_0034_1243439977.pbm in Copy Database */,
+				F48BCFCC108B6B8800FF3C1A /* db_0034_1243439988.pbm in Copy Database */,
+				F48BCFCD108B6B8800FF3C1A /* db_0034_1243439990.pbm in Copy Database */,
+				F48BCFCE108B6B8800FF3C1A /* db_0034_1243439997.pbm in Copy Database */,
+				F48BCFCF108B6B8800FF3C1A /* db_0034_1243440020.pbm in Copy Database */,
+				F48BCFD0108B6B8800FF3C1A /* db_0034_1243440030.pbm in Copy Database */,
+				F48BCFD1108B6B8800FF3C1A /* db_0034_1243440035.pbm in Copy Database */,
+				F48BCFD2108B6B8800FF3C1A /* db_0034_1243440045.pbm in Copy Database */,
+				F48BCFD3108B6B8800FF3C1A /* db_0034_1243440068.pbm in Copy Database */,
+				F48BCFD4108B6B8800FF3C1A /* db_0034_1243440078.pbm in Copy Database */,
+				F48BCFD5108B6B8800FF3C1A /* db_0034_1243440079.pbm in Copy Database */,
+				F48BCFD6108B6B8800FF3C1A /* db_0034_1243440095.pbm in Copy Database */,
+				F48BCFD7108B6B8800FF3C1A /* db_0034_1243440113.pbm in Copy Database */,
+				F48BCFD8108B6B8800FF3C1A /* db_0034_1243440169.pbm in Copy Database */,
+				F48BCFD9108B6B8800FF3C1A /* db_0034_1243527328.pbm in Copy Database */,
+				F48BCFDA108B6B8800FF3C1A /* db_0034_1243527437.pbm in Copy Database */,
+				F48BCFDB108B6B8800FF3C1A /* db_0034_1243527445.pbm in Copy Database */,
+				F48BCFDC108B6B8800FF3C1A /* db_0034_1243527468.pbm in Copy Database */,
+				F48BCFDD108B6B8800FF3C1A /* db_0034_1243527475.pbm in Copy Database */,
+				F48BCFDE108B6B8800FF3C1A /* db_0034_1243527531.pbm in Copy Database */,
+				F48BCFDF108B6B8800FF3C1A /* db_0034_1243527577.pbm in Copy Database */,
+				F48BCFE0108B6B8800FF3C1A /* db_0034_1243527580.pbm in Copy Database */,
+				F48BCFE1108B6B8800FF3C1A /* db_0034_1243527585.pbm in Copy Database */,
+				F48BCFE2108B6B8800FF3C1A /* db_0034_1243527638.pbm in Copy Database */,
+				F48BCFE3108B6B8800FF3C1A /* db_0035_1243440002.pbm in Copy Database */,
+				F48BCFE4108B6B8800FF3C1A /* db_0035_1243440019.pbm in Copy Database */,
+				F48BCFE5108B6B8800FF3C1A /* db_0035_1243440059.pbm in Copy Database */,
+				F48BCFE6108B6B8800FF3C1A /* db_0035_1243440102.pbm in Copy Database */,
+				F48BCFE7108B6B8800FF3C1A /* db_0035_1243440114.pbm in Copy Database */,
+				F48BCFE8108B6B8800FF3C1A /* db_0035_1243440196.pbm in Copy Database */,
+				F48BCFE9108B6B8800FF3C1A /* db_0035_1243440198.pbm in Copy Database */,
+				F48BCFEA108B6B8800FF3C1A /* db_0035_1243526142.pbm in Copy Database */,
+				F48BCFEB108B6B8800FF3C1A /* db_0035_1243527283.pbm in Copy Database */,
+				F48BCFEC108B6B8800FF3C1A /* db_0035_1243527363.pbm in Copy Database */,
+				F48BCFED108B6B8800FF3C1A /* db_0035_1243527366.pbm in Copy Database */,
+				F48BCFEE108B6B8800FF3C1A /* db_0035_1243527444.pbm in Copy Database */,
+				F48BCFEF108B6B8800FF3C1A /* db_0035_1243527459.pbm in Copy Database */,
+				F48BCFF0108B6B8800FF3C1A /* db_0035_1243527462.pbm in Copy Database */,
+				F48BCFF1108B6B8800FF3C1A /* db_0035_1243527467.pbm in Copy Database */,
+				F48BCFF2108B6B8800FF3C1A /* db_0035_1243527474.pbm in Copy Database */,
+				F48BCFF3108B6B8800FF3C1A /* db_0035_1243527479.pbm in Copy Database */,
+				F48BCFF4108B6B8800FF3C1A /* db_0035_1243527480.pbm in Copy Database */,
+				F48BCFF5108B6B8800FF3C1A /* db_0035_1243527611.pbm in Copy Database */,
+				F48BCFF6108B6B8800FF3C1A /* db_0035_1243527661.pbm in Copy Database */,
+				F48BCFF7108B6B8800FF3C1A /* db_0036_1243439909.pbm in Copy Database */,
+				F48BCFF8108B6B8800FF3C1A /* db_0036_1243439910.pbm in Copy Database */,
+				F48BCFF9108B6B8800FF3C1A /* db_0036_1243439968.pbm in Copy Database */,
+				F48BCFFA108B6B8800FF3C1A /* db_0036_1243439975.pbm in Copy Database */,
+				F48BCFFB108B6B8800FF3C1A /* db_0036_1243439976.pbm in Copy Database */,
+				F48BCFFC108B6B8800FF3C1A /* db_0036_1243439989.pbm in Copy Database */,
+				F48BCFFD108B6B8800FF3C1A /* db_0036_1243440018.pbm in Copy Database */,
+				F48BCFFE108B6B8800FF3C1A /* db_0036_1243440058.pbm in Copy Database */,
+				F48BCFFF108B6B8800FF3C1A /* db_0036_1243440070.pbm in Copy Database */,
+				F48BD000108B6B8800FF3C1A /* db_0036_1243440071.pbm in Copy Database */,
+				F48BD001108B6B8800FF3C1A /* db_0036_1243440082.pbm in Copy Database */,
+				F48BD002108B6B8800FF3C1A /* db_0036_1243440099.pbm in Copy Database */,
+				F48BD003108B6B8800FF3C1A /* db_0036_1243440100.pbm in Copy Database */,
+				F48BD004108B6B8800FF3C1A /* db_0036_1243440107.pbm in Copy Database */,
+				F48BD005108B6B8800FF3C1A /* db_0036_1243440108.pbm in Copy Database */,
+				F48BD006108B6B8800FF3C1A /* db_0036_1243440112.pbm in Copy Database */,
+				F48BD007108B6B8800FF3C1A /* db_0036_1243440115.pbm in Copy Database */,
+				F48BD008108B6B8800FF3C1A /* db_0036_1243440123.pbm in Copy Database */,
+				F48BD009108B6B8800FF3C1A /* db_0036_1243440130.pbm in Copy Database */,
+				F48BD00A108B6B8800FF3C1A /* db_0036_1243440179.pbm in Copy Database */,
+				F48BD00B108B6B8800FF3C1A /* db_0036_1243527323.pbm in Copy Database */,
+				F48BD00C108B6B8800FF3C1A /* db_0036_1243527513.pbm in Copy Database */,
+				F48BD00D108B6B8800FF3C1A /* db_0036_1243527586.pbm in Copy Database */,
+				F48BD00E108B6B8800FF3C1A /* db_0036_1243527591.pbm in Copy Database */,
+				F48BD00F108B6B8800FF3C1A /* db_0036_1243527596.pbm in Copy Database */,
+				F48BD010108B6B8800FF3C1A /* db_0036_1243527614.pbm in Copy Database */,
+				F48BD011108B6B8800FF3C1A /* db_0036_1243527660.pbm in Copy Database */,
+				F48BD012108B6B8800FF3C1A /* db_0037_1243439926.pbm in Copy Database */,
+				F48BD013108B6B8800FF3C1A /* db_0037_1243440158.pbm in Copy Database */,
+				F48BD014108B6B8800FF3C1A /* db_0038_1243527340.pbm in Copy Database */,
+				F48BD015108B6B8800FF3C1A /* db_0038_1243527588.pbm in Copy Database */,
+				F48BD016108B6B8800FF3C1A /* db_0039_1243439904.pbm in Copy Database */,
+				F48BD017108B6B8800FF3C1A /* db_0039_1243440066.pbm in Copy Database */,
+				F48BD018108B6B8800FF3C1A /* db_0039_1243440077.pbm in Copy Database */,
+				F48BD019108B6B8800FF3C1A /* db_0039_1243440094.pbm in Copy Database */,
+				F48BD01A108B6B8800FF3C1A /* db_0039_1243440109.pbm in Copy Database */,
+				F48BD01B108B6B8800FF3C1A /* db_0039_1243440135.pbm in Copy Database */,
+				F48BD01C108B6B8800FF3C1A /* db_0039_1243440168.pbm in Copy Database */,
+				F48BD01D108B6B8800FF3C1A /* db_0039_1243527330.pbm in Copy Database */,
+				F48BD01E108B6B8800FF3C1A /* db_0039_1243527492.pbm in Copy Database */,
+				F48BD01F108B6B8800FF3C1A /* db_0039_1243527589.pbm in Copy Database */,
+				F48BD020108B6B8800FF3C1A /* db_0039_1243527613.pbm in Copy Database */,
+				F48BD021108B6B8800FF3C1A /* db_003e_1243439999.pbm in Copy Database */,
+				F48BD022108B6B8800FF3C1A /* db_003e_1243440010.pbm in Copy Database */,
+				F48BD023108B6B8800FF3C1A /* db_003e_1243440028.pbm in Copy Database */,
+				F48BD024108B6B8800FF3C1A /* db_003e_1243440036.pbm in Copy Database */,
+				F48BD025108B6B8800FF3C1A /* db_003e_1243440041.pbm in Copy Database */,
+				F48BD026108B6B8800FF3C1A /* db_003e_1243440047.pbm in Copy Database */,
+				F48BD027108B6B8800FF3C1A /* db_003e_1243440098.pbm in Copy Database */,
+				F48BD028108B6B8800FF3C1A /* db_003e_1243440120.pbm in Copy Database */,
+				F48BD029108B6B8800FF3C1A /* db_003e_1243440126.pbm in Copy Database */,
+				F48BD02A108B6B8800FF3C1A /* db_003e_1243440154.pbm in Copy Database */,
+				F48BD02B108B6B8800FF3C1A /* db_003e_1243440185.pbm in Copy Database */,
+				F48BD02C108B6B8800FF3C1A /* db_003e_1243527345.pbm in Copy Database */,
+				F48BD02D108B6B8800FF3C1A /* db_003e_1243527449.pbm in Copy Database */,
+				F48BD02E108B6B8800FF3C1A /* db_003e_1243527464.pbm in Copy Database */,
+				F48BD02F108B6B8800FF3C1A /* db_003e_1243527483.pbm in Copy Database */,
+				F48BD030108B6B8800FF3C1A /* db_003e_1243527485.pbm in Copy Database */,
+				F48BD031108B6B8800FF3C1A /* db_003e_1243527490.pbm in Copy Database */,
+				F48BD032108B6B8800FF3C1A /* db_003e_1243527528.pbm in Copy Database */,
+				F48BD033108B6B8800FF3C1A /* db_003e_1243527594.pbm in Copy Database */,
+				F48BD034108B6B8800FF3C1A /* db_003e_1243527634.pbm in Copy Database */,
+				F48BD035108B6B8800FF3C1A /* db_003e_1243527640.pbm in Copy Database */,
+			);
+			name = "Copy Database";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49FB60F109CFDA200E0C038 /* Copy PIL */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PIL;
+			dstSubfolderSpec = 7;
+			files = (
+				F49FB5A8109CFD8A00E0C038 /* __init__.py in Copy PIL */,
+				F49FB5A9109CFD8A00E0C038 /* _imaging.so in Copy PIL */,
+				F49FB5AB109CFD8A00E0C038 /* _imagingmath.so in Copy PIL */,
+				F49FB5AC109CFD8A00E0C038 /* _imagingtk.so in Copy PIL */,
+				F49FB5AD109CFD8A00E0C038 /* ArgImagePlugin.py in Copy PIL */,
+				F49FB5AE109CFD8A00E0C038 /* BdfFontFile.py in Copy PIL */,
+				F49FB5AF109CFD8A00E0C038 /* BmpImagePlugin.py in Copy PIL */,
+				F49FB5B0109CFD8A00E0C038 /* BufrStubImagePlugin.py in Copy PIL */,
+				F49FB5B1109CFD8A00E0C038 /* ContainerIO.py in Copy PIL */,
+				F49FB5B2109CFD8A00E0C038 /* CurImagePlugin.py in Copy PIL */,
+				F49FB5B3109CFD8A00E0C038 /* DcxImagePlugin.py in Copy PIL */,
+				F49FB5B4109CFD8A00E0C038 /* EpsImagePlugin.py in Copy PIL */,
+				F49FB5B5109CFD8A00E0C038 /* ExifTags.py in Copy PIL */,
+				F49FB5B6109CFD8A00E0C038 /* FitsStubImagePlugin.py in Copy PIL */,
+				F49FB5B7109CFD8A00E0C038 /* FliImagePlugin.py in Copy PIL */,
+				F49FB5B8109CFD8A00E0C038 /* FontFile.py in Copy PIL */,
+				F49FB5B9109CFD8A00E0C038 /* FpxImagePlugin.py in Copy PIL */,
+				F49FB5BA109CFD8A00E0C038 /* GbrImagePlugin.py in Copy PIL */,
+				F49FB5BB109CFD8A00E0C038 /* GdImageFile.py in Copy PIL */,
+				F49FB5BC109CFD8A00E0C038 /* GifImagePlugin.py in Copy PIL */,
+				F49FB5BD109CFD8A00E0C038 /* GimpGradientFile.py in Copy PIL */,
+				F49FB5BE109CFD8A00E0C038 /* GimpPaletteFile.py in Copy PIL */,
+				F49FB5BF109CFD8A00E0C038 /* GribStubImagePlugin.py in Copy PIL */,
+				F49FB5C0109CFD8A00E0C038 /* Hdf5StubImagePlugin.py in Copy PIL */,
+				F49FB5C1109CFD8A00E0C038 /* IcnsImagePlugin.py in Copy PIL */,
+				F49FB5C2109CFD8A00E0C038 /* IcoImagePlugin.py in Copy PIL */,
+				F49FB5C3109CFD8A00E0C038 /* Image.py in Copy PIL */,
+				F49FB5C4109CFD8A00E0C038 /* ImageChops.py in Copy PIL */,
+				F49FB5C5109CFD8A00E0C038 /* ImageColor.py in Copy PIL */,
+				F49FB5C6109CFD8A00E0C038 /* ImageDraw.py in Copy PIL */,
+				F49FB5C7109CFD8A00E0C038 /* ImageDraw2.py in Copy PIL */,
+				F49FB5C8109CFD8A00E0C038 /* ImageEnhance.py in Copy PIL */,
+				F49FB5C9109CFD8A00E0C038 /* ImageFile.py in Copy PIL */,
+				F49FB5CA109CFD8A00E0C038 /* ImageFileIO.py in Copy PIL */,
+				F49FB5CB109CFD8A00E0C038 /* ImageFilter.py in Copy PIL */,
+				F49FB5CC109CFD8A00E0C038 /* ImageFont.py in Copy PIL */,
+				F49FB5CD109CFD8A00E0C038 /* ImageGL.py in Copy PIL */,
+				F49FB5CE109CFD8A00E0C038 /* ImageGrab.py in Copy PIL */,
+				F49FB5CF109CFD8A00E0C038 /* ImageMath.py in Copy PIL */,
+				F49FB5D0109CFD8A00E0C038 /* ImageMode.py in Copy PIL */,
+				F49FB5D1109CFD8A00E0C038 /* ImageOps.py in Copy PIL */,
+				F49FB5D2109CFD8A00E0C038 /* ImagePalette.py in Copy PIL */,
+				F49FB5D3109CFD8A00E0C038 /* ImagePath.py in Copy PIL */,
+				F49FB5D4109CFD8A00E0C038 /* ImageQt.py in Copy PIL */,
+				F49FB5D5109CFD8A00E0C038 /* ImageSequence.py in Copy PIL */,
+				F49FB5D6109CFD8A00E0C038 /* ImageStat.py in Copy PIL */,
+				F49FB5D7109CFD8A00E0C038 /* ImageTk.py in Copy PIL */,
+				F49FB5D8109CFD8A00E0C038 /* ImageTransform.py in Copy PIL */,
+				F49FB5D9109CFD8A00E0C038 /* ImageWin.py in Copy PIL */,
+				F49FB5DA109CFD8A00E0C038 /* ImImagePlugin.py in Copy PIL */,
+				F49FB5DB109CFD8A00E0C038 /* ImtImagePlugin.py in Copy PIL */,
+				F49FB5DC109CFD8A00E0C038 /* IptcImagePlugin.py in Copy PIL */,
+				F49FB5DD109CFD8A00E0C038 /* JpegImagePlugin.py in Copy PIL */,
+				F49FB5DE109CFD8A00E0C038 /* McIdasImagePlugin.py in Copy PIL */,
+				F49FB5DF109CFD8A00E0C038 /* MicImagePlugin.py in Copy PIL */,
+				F49FB5E0109CFD8A00E0C038 /* MpegImagePlugin.py in Copy PIL */,
+				F49FB5E1109CFD8A00E0C038 /* MspImagePlugin.py in Copy PIL */,
+				F49FB5E2109CFD8A00E0C038 /* OleFileIO.py in Copy PIL */,
+				F49FB5E3109CFD8A00E0C038 /* PaletteFile.py in Copy PIL */,
+				F49FB5E4109CFD8A00E0C038 /* PalmImagePlugin.py in Copy PIL */,
+				F49FB5E5109CFD8A00E0C038 /* PcdImagePlugin.py in Copy PIL */,
+				F49FB5E6109CFD8A00E0C038 /* PcfFontFile.py in Copy PIL */,
+				F49FB5E7109CFD8A00E0C038 /* PcxImagePlugin.py in Copy PIL */,
+				F49FB5E8109CFD8A00E0C038 /* PdfImagePlugin.py in Copy PIL */,
+				F49FB5EA109CFD8A00E0C038 /* PixarImagePlugin.py in Copy PIL */,
+				F49FB5EB109CFD8A00E0C038 /* PngImagePlugin.py in Copy PIL */,
+				F49FB5EC109CFD8A00E0C038 /* PpmImagePlugin.py in Copy PIL */,
+				F49FB5ED109CFD8A00E0C038 /* PsdImagePlugin.py in Copy PIL */,
+				F49FB5EE109CFD8A00E0C038 /* PSDraw.py in Copy PIL */,
+				F49FB5EF109CFD8A00E0C038 /* SgiImagePlugin.py in Copy PIL */,
+				F49FB5F0109CFD8A00E0C038 /* SpiderImagePlugin.py in Copy PIL */,
+				F49FB5F1109CFD8A00E0C038 /* SunImagePlugin.py in Copy PIL */,
+				F49FB5F2109CFD8A00E0C038 /* TarIO.py in Copy PIL */,
+				F49FB5F3109CFD8A00E0C038 /* TgaImagePlugin.py in Copy PIL */,
+				F49FB5F4109CFD8A00E0C038 /* TiffImagePlugin.py in Copy PIL */,
+				F49FB5F5109CFD8A00E0C038 /* TiffTags.py in Copy PIL */,
+				F49FB5F6109CFD8A00E0C038 /* WalImageFile.py in Copy PIL */,
+				F49FB5F7109CFD8A00E0C038 /* WmfImagePlugin.py in Copy PIL */,
+				F49FB5F8109CFD8A00E0C038 /* XbmImagePlugin.py in Copy PIL */,
+				F49FB5F9109CFD8A00E0C038 /* XpmImagePlugin.py in Copy PIL */,
+				F49FB5FA109CFD8A00E0C038 /* XVThumbImagePlugin.py in Copy PIL */,
+			);
+			name = "Copy PIL";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		77631A260C06C501005415CB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		77631A3E0C0748CF005415CB /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4367D33109B796A00912C41 /* iSight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iSight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4367D34109B796A00912C41 /* iSight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iSight-Info.plist"; sourceTree = "<group>"; };
+		F4367D38109B797C00912C41 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		F4367D3C109B798300912C41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F4367D41109B79A700912C41 /* ISight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISight.h; sourceTree = "<group>"; };
+		F4367D42109B79A700912C41 /* ISight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISight.m; sourceTree = "<group>"; };
+		F4367D8F109B7F7900912C41 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F4367DAE109B813A00912C41 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F4367FA2109B852000912C41 /* PySight.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PySight.py; sourceTree = "<group>"; };
+		F48BCE87108B53A200FF3C1A /* OCR.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OCR.py; sourceTree = "<group>"; };
+		F48BCE88108B53A200FF3C1A /* Reader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Reader.py; sourceTree = "<group>"; };
+		F48BCE89108B53A200FF3C1A /* ReaderController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ReaderController.py; sourceTree = "<group>"; };
+		F48BCECF108B6B7500FF3C1A /* gocr */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = gocr; path = ../Dependencies/gocr; sourceTree = "<group>"; };
+		F48BCED2108B6B8700FF3C1A /* db.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = db.lst; sourceTree = "<group>"; };
+		F48BCED3108B6B8700FF3C1A /* db_002b_1243440004.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440004.pbm; sourceTree = "<group>"; };
+		F48BCED4108B6B8700FF3C1A /* db_002b_1243440031.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440031.pbm; sourceTree = "<group>"; };
+		F48BCED5108B6B8700FF3C1A /* db_002b_1243440042.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440042.pbm; sourceTree = "<group>"; };
+		F48BCED6108B6B8700FF3C1A /* db_002b_1243440073.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440073.pbm; sourceTree = "<group>"; };
+		F48BCED7108B6B8700FF3C1A /* db_002b_1243440117.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440117.pbm; sourceTree = "<group>"; };
+		F48BCED8108B6B8700FF3C1A /* db_002b_1243440171.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440171.pbm; sourceTree = "<group>"; };
+		F48BCED9108B6B8700FF3C1A /* db_002b_1243440194.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243440194.pbm; sourceTree = "<group>"; };
+		F48BCEDA108B6B8700FF3C1A /* db_002b_1243526145.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243526145.pbm; sourceTree = "<group>"; };
+		F48BCEDB108B6B8700FF3C1A /* db_002b_1243527307.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527307.pbm; sourceTree = "<group>"; };
+		F48BCEDC108B6B8700FF3C1A /* db_002b_1243527334.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527334.pbm; sourceTree = "<group>"; };
+		F48BCEDD108B6B8700FF3C1A /* db_002b_1243527378.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527378.pbm; sourceTree = "<group>"; };
+		F48BCEDE108B6B8700FF3C1A /* db_002b_1243527434.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527434.pbm; sourceTree = "<group>"; };
+		F48BCEDF108B6B8700FF3C1A /* db_002b_1243527447.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527447.pbm; sourceTree = "<group>"; };
+		F48BCEE0108B6B8700FF3C1A /* db_002b_1243527461.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527461.pbm; sourceTree = "<group>"; };
+		F48BCEE1108B6B8700FF3C1A /* db_002b_1243527477.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527477.pbm; sourceTree = "<group>"; };
+		F48BCEE2108B6B8700FF3C1A /* db_002b_1243527592.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527592.pbm; sourceTree = "<group>"; };
+		F48BCEE3108B6B8700FF3C1A /* db_002b_1243527598.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527598.pbm; sourceTree = "<group>"; };
+		F48BCEE4108B6B8700FF3C1A /* db_002b_1243527602.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527602.pbm; sourceTree = "<group>"; };
+		F48BCEE5108B6B8700FF3C1A /* db_002b_1243527616.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527616.pbm; sourceTree = "<group>"; };
+		F48BCEE6108B6B8700FF3C1A /* db_002b_1243527630.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527630.pbm; sourceTree = "<group>"; };
+		F48BCEE7108B6B8700FF3C1A /* db_002b_1243527637.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_002b_1243527637.pbm; sourceTree = "<group>"; };
+		F48BCEE8108B6B8700FF3C1A /* db_0030_1243439902.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243439902.pbm; sourceTree = "<group>"; };
+		F48BCEE9108B6B8700FF3C1A /* db_0030_1243439972.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243439972.pbm; sourceTree = "<group>"; };
+		F48BCEEA108B6B8700FF3C1A /* db_0030_1243439996.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243439996.pbm; sourceTree = "<group>"; };
+		F48BCEEB108B6B8700FF3C1A /* db_0030_1243440033.pbm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = db_0030_1243440033.pbm; sourceTree = "<group>"; };
+		F48BCEEC108B6B8700FF3C1A /* db_0030_1243440044.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243440044.pbm; sourceTree = "<group>"; };
+		F48BCEED108B6B8700FF3C1A /* db_0030_1243440075.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243440075.pbm; sourceTree = "<group>"; };
+		F48BCEEE108B6B8700FF3C1A /* db_0030_1243440090.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243440090.pbm; sourceTree = "<group>"; };
+		F48BCEEF108B6B8700FF3C1A /* db_0030_1243440155.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243440155.pbm; sourceTree = "<group>"; };
+		F48BCEF0108B6B8700FF3C1A /* db_0030_1243440187.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243440187.pbm; sourceTree = "<group>"; };
+		F48BCEF1108B6B8700FF3C1A /* db_0030_1243526144.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243526144.pbm; sourceTree = "<group>"; };
+		F48BCEF2108B6B8700FF3C1A /* db_0030_1243527322.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527322.pbm; sourceTree = "<group>"; };
+		F48BCEF3108B6B8700FF3C1A /* db_0030_1243527325.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527325.pbm; sourceTree = "<group>"; };
+		F48BCEF4108B6B8700FF3C1A /* db_0030_1243527338.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527338.pbm; sourceTree = "<group>"; };
+		F48BCEF5108B6B8700FF3C1A /* db_0030_1243527440.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527440.pbm; sourceTree = "<group>"; };
+		F48BCEF6108B6B8700FF3C1A /* db_0030_1243527442.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527442.pbm; sourceTree = "<group>"; };
+		F48BCEF7108B6B8700FF3C1A /* db_0030_1243527455.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527455.pbm; sourceTree = "<group>"; };
+		F48BCEF8108B6B8700FF3C1A /* db_0030_1243527473.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527473.pbm; sourceTree = "<group>"; };
+		F48BCEF9108B6B8700FF3C1A /* db_0030_1243527496.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527496.pbm; sourceTree = "<group>"; };
+		F48BCEFA108B6B8700FF3C1A /* db_0030_1243527499.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527499.pbm; sourceTree = "<group>"; };
+		F48BCEFB108B6B8700FF3C1A /* db_0030_1243527581.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0030_1243527581.pbm; sourceTree = "<group>"; };
+		F48BCEFC108B6B8700FF3C1A /* db_0031_1243439908.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243439908.pbm; sourceTree = "<group>"; };
+		F48BCEFD108B6B8700FF3C1A /* db_0031_1243439917.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243439917.pbm; sourceTree = "<group>"; };
+		F48BCEFE108B6B8700FF3C1A /* db_0031_1243440001.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440001.pbm; sourceTree = "<group>"; };
+		F48BCEFF108B6B8700FF3C1A /* db_0031_1243440017.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440017.pbm; sourceTree = "<group>"; };
+		F48BCF00108B6B8700FF3C1A /* db_0031_1243440069.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440069.pbm; sourceTree = "<group>"; };
+		F48BCF01108B6B8700FF3C1A /* db_0031_1243440137.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440137.pbm; sourceTree = "<group>"; };
+		F48BCF02108B6B8700FF3C1A /* db_0031_1243440180.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440180.pbm; sourceTree = "<group>"; };
+		F48BCF03108B6B8700FF3C1A /* db_0031_1243440189.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243440189.pbm; sourceTree = "<group>"; };
+		F48BCF04108B6B8700FF3C1A /* db_0031_1243527303.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527303.pbm; sourceTree = "<group>"; };
+		F48BCF05108B6B8700FF3C1A /* db_0031_1243527320.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527320.pbm; sourceTree = "<group>"; };
+		F48BCF06108B6B8700FF3C1A /* db_0031_1243527335.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527335.pbm; sourceTree = "<group>"; };
+		F48BCF07108B6B8700FF3C1A /* db_0031_1243527343.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527343.pbm; sourceTree = "<group>"; };
+		F48BCF08108B6B8700FF3C1A /* db_0031_1243527344.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527344.pbm; sourceTree = "<group>"; };
+		F48BCF09108B6B8700FF3C1A /* db_0031_1243527436.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527436.pbm; sourceTree = "<group>"; };
+		F48BCF0A108B6B8700FF3C1A /* db_0031_1243527443.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527443.pbm; sourceTree = "<group>"; };
+		F48BCF0B108B6B8700FF3C1A /* db_0031_1243527457.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527457.pbm; sourceTree = "<group>"; };
+		F48BCF0C108B6B8700FF3C1A /* db_0031_1243527458.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527458.pbm; sourceTree = "<group>"; };
+		F48BCF0D108B6B8700FF3C1A /* db_0031_1243527497.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527497.pbm; sourceTree = "<group>"; };
+		F48BCF0E108B6B8700FF3C1A /* db_0031_1243527529.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527529.pbm; sourceTree = "<group>"; };
+		F48BCF0F108B6B8700FF3C1A /* db_0031_1243527548.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527548.pbm; sourceTree = "<group>"; };
+		F48BCF10108B6B8700FF3C1A /* db_0031_1243527579.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0031_1243527579.pbm; sourceTree = "<group>"; };
+		F48BCF11108B6B8700FF3C1A /* db_0032_1243440054.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0032_1243440054.pbm; sourceTree = "<group>"; };
+		F48BCF12108B6B8700FF3C1A /* db_0032_1243527327.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0032_1243527327.pbm; sourceTree = "<group>"; };
+		F48BCF13108B6B8700FF3C1A /* db_0033_1243439913.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0033_1243439913.pbm; sourceTree = "<group>"; };
+		F48BCF14108B6B8700FF3C1A /* db_0033_1243439930.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0033_1243439930.pbm; sourceTree = "<group>"; };
+		F48BCF15108B6B8700FF3C1A /* db_0033_1243439991.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0033_1243439991.pbm; sourceTree = "<group>"; };
+		F48BCF16108B6B8700FF3C1A /* db_0034_1243439905.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439905.pbm; sourceTree = "<group>"; };
+		F48BCF17108B6B8700FF3C1A /* db_0034_1243439914.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439914.pbm; sourceTree = "<group>"; };
+		F48BCF18108B6B8700FF3C1A /* db_0034_1243439969.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439969.pbm; sourceTree = "<group>"; };
+		F48BCF19108B6B8700FF3C1A /* db_0034_1243439977.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439977.pbm; sourceTree = "<group>"; };
+		F48BCF1A108B6B8700FF3C1A /* db_0034_1243439988.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439988.pbm; sourceTree = "<group>"; };
+		F48BCF1B108B6B8700FF3C1A /* db_0034_1243439990.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439990.pbm; sourceTree = "<group>"; };
+		F48BCF1C108B6B8700FF3C1A /* db_0034_1243439997.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243439997.pbm; sourceTree = "<group>"; };
+		F48BCF1D108B6B8700FF3C1A /* db_0034_1243440020.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440020.pbm; sourceTree = "<group>"; };
+		F48BCF1E108B6B8700FF3C1A /* db_0034_1243440030.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440030.pbm; sourceTree = "<group>"; };
+		F48BCF1F108B6B8700FF3C1A /* db_0034_1243440035.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440035.pbm; sourceTree = "<group>"; };
+		F48BCF20108B6B8700FF3C1A /* db_0034_1243440045.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440045.pbm; sourceTree = "<group>"; };
+		F48BCF21108B6B8700FF3C1A /* db_0034_1243440068.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440068.pbm; sourceTree = "<group>"; };
+		F48BCF22108B6B8700FF3C1A /* db_0034_1243440078.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440078.pbm; sourceTree = "<group>"; };
+		F48BCF23108B6B8700FF3C1A /* db_0034_1243440079.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440079.pbm; sourceTree = "<group>"; };
+		F48BCF24108B6B8700FF3C1A /* db_0034_1243440095.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440095.pbm; sourceTree = "<group>"; };
+		F48BCF25108B6B8700FF3C1A /* db_0034_1243440113.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440113.pbm; sourceTree = "<group>"; };
+		F48BCF26108B6B8700FF3C1A /* db_0034_1243440169.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243440169.pbm; sourceTree = "<group>"; };
+		F48BCF27108B6B8700FF3C1A /* db_0034_1243527328.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527328.pbm; sourceTree = "<group>"; };
+		F48BCF28108B6B8700FF3C1A /* db_0034_1243527437.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527437.pbm; sourceTree = "<group>"; };
+		F48BCF29108B6B8700FF3C1A /* db_0034_1243527445.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527445.pbm; sourceTree = "<group>"; };
+		F48BCF2A108B6B8700FF3C1A /* db_0034_1243527468.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527468.pbm; sourceTree = "<group>"; };
+		F48BCF2B108B6B8700FF3C1A /* db_0034_1243527475.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527475.pbm; sourceTree = "<group>"; };
+		F48BCF2C108B6B8700FF3C1A /* db_0034_1243527531.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527531.pbm; sourceTree = "<group>"; };
+		F48BCF2D108B6B8700FF3C1A /* db_0034_1243527577.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527577.pbm; sourceTree = "<group>"; };
+		F48BCF2E108B6B8700FF3C1A /* db_0034_1243527580.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527580.pbm; sourceTree = "<group>"; };
+		F48BCF2F108B6B8700FF3C1A /* db_0034_1243527585.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527585.pbm; sourceTree = "<group>"; };
+		F48BCF30108B6B8700FF3C1A /* db_0034_1243527638.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0034_1243527638.pbm; sourceTree = "<group>"; };
+		F48BCF31108B6B8700FF3C1A /* db_0035_1243440002.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440002.pbm; sourceTree = "<group>"; };
+		F48BCF32108B6B8700FF3C1A /* db_0035_1243440019.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440019.pbm; sourceTree = "<group>"; };
+		F48BCF33108B6B8700FF3C1A /* db_0035_1243440059.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440059.pbm; sourceTree = "<group>"; };
+		F48BCF34108B6B8700FF3C1A /* db_0035_1243440102.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440102.pbm; sourceTree = "<group>"; };
+		F48BCF35108B6B8700FF3C1A /* db_0035_1243440114.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440114.pbm; sourceTree = "<group>"; };
+		F48BCF36108B6B8700FF3C1A /* db_0035_1243440196.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440196.pbm; sourceTree = "<group>"; };
+		F48BCF37108B6B8700FF3C1A /* db_0035_1243440198.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243440198.pbm; sourceTree = "<group>"; };
+		F48BCF38108B6B8700FF3C1A /* db_0035_1243526142.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243526142.pbm; sourceTree = "<group>"; };
+		F48BCF39108B6B8700FF3C1A /* db_0035_1243527283.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527283.pbm; sourceTree = "<group>"; };
+		F48BCF3A108B6B8700FF3C1A /* db_0035_1243527363.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527363.pbm; sourceTree = "<group>"; };
+		F48BCF3B108B6B8700FF3C1A /* db_0035_1243527366.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527366.pbm; sourceTree = "<group>"; };
+		F48BCF3C108B6B8700FF3C1A /* db_0035_1243527444.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527444.pbm; sourceTree = "<group>"; };
+		F48BCF3D108B6B8700FF3C1A /* db_0035_1243527459.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527459.pbm; sourceTree = "<group>"; };
+		F48BCF3E108B6B8700FF3C1A /* db_0035_1243527462.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527462.pbm; sourceTree = "<group>"; };
+		F48BCF3F108B6B8700FF3C1A /* db_0035_1243527467.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527467.pbm; sourceTree = "<group>"; };
+		F48BCF40108B6B8700FF3C1A /* db_0035_1243527474.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527474.pbm; sourceTree = "<group>"; };
+		F48BCF41108B6B8700FF3C1A /* db_0035_1243527479.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527479.pbm; sourceTree = "<group>"; };
+		F48BCF42108B6B8800FF3C1A /* db_0035_1243527480.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527480.pbm; sourceTree = "<group>"; };
+		F48BCF43108B6B8800FF3C1A /* db_0035_1243527611.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527611.pbm; sourceTree = "<group>"; };
+		F48BCF44108B6B8800FF3C1A /* db_0035_1243527661.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0035_1243527661.pbm; sourceTree = "<group>"; };
+		F48BCF45108B6B8800FF3C1A /* db_0036_1243439909.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439909.pbm; sourceTree = "<group>"; };
+		F48BCF46108B6B8800FF3C1A /* db_0036_1243439910.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439910.pbm; sourceTree = "<group>"; };
+		F48BCF47108B6B8800FF3C1A /* db_0036_1243439968.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439968.pbm; sourceTree = "<group>"; };
+		F48BCF48108B6B8800FF3C1A /* db_0036_1243439975.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439975.pbm; sourceTree = "<group>"; };
+		F48BCF49108B6B8800FF3C1A /* db_0036_1243439976.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439976.pbm; sourceTree = "<group>"; };
+		F48BCF4A108B6B8800FF3C1A /* db_0036_1243439989.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243439989.pbm; sourceTree = "<group>"; };
+		F48BCF4B108B6B8800FF3C1A /* db_0036_1243440018.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440018.pbm; sourceTree = "<group>"; };
+		F48BCF4C108B6B8800FF3C1A /* db_0036_1243440058.pbm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = db_0036_1243440058.pbm; sourceTree = "<group>"; };
+		F48BCF4D108B6B8800FF3C1A /* db_0036_1243440070.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440070.pbm; sourceTree = "<group>"; };
+		F48BCF4E108B6B8800FF3C1A /* db_0036_1243440071.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440071.pbm; sourceTree = "<group>"; };
+		F48BCF4F108B6B8800FF3C1A /* db_0036_1243440082.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440082.pbm; sourceTree = "<group>"; };
+		F48BCF50108B6B8800FF3C1A /* db_0036_1243440099.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440099.pbm; sourceTree = "<group>"; };
+		F48BCF51108B6B8800FF3C1A /* db_0036_1243440100.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440100.pbm; sourceTree = "<group>"; };
+		F48BCF52108B6B8800FF3C1A /* db_0036_1243440107.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440107.pbm; sourceTree = "<group>"; };
+		F48BCF53108B6B8800FF3C1A /* db_0036_1243440108.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440108.pbm; sourceTree = "<group>"; };
+		F48BCF54108B6B8800FF3C1A /* db_0036_1243440112.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440112.pbm; sourceTree = "<group>"; };
+		F48BCF55108B6B8800FF3C1A /* db_0036_1243440115.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440115.pbm; sourceTree = "<group>"; };
+		F48BCF56108B6B8800FF3C1A /* db_0036_1243440123.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440123.pbm; sourceTree = "<group>"; };
+		F48BCF57108B6B8800FF3C1A /* db_0036_1243440130.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440130.pbm; sourceTree = "<group>"; };
+		F48BCF58108B6B8800FF3C1A /* db_0036_1243440179.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243440179.pbm; sourceTree = "<group>"; };
+		F48BCF59108B6B8800FF3C1A /* db_0036_1243527323.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527323.pbm; sourceTree = "<group>"; };
+		F48BCF5A108B6B8800FF3C1A /* db_0036_1243527513.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527513.pbm; sourceTree = "<group>"; };
+		F48BCF5B108B6B8800FF3C1A /* db_0036_1243527586.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527586.pbm; sourceTree = "<group>"; };
+		F48BCF5C108B6B8800FF3C1A /* db_0036_1243527591.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527591.pbm; sourceTree = "<group>"; };
+		F48BCF5D108B6B8800FF3C1A /* db_0036_1243527596.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527596.pbm; sourceTree = "<group>"; };
+		F48BCF5E108B6B8800FF3C1A /* db_0036_1243527614.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527614.pbm; sourceTree = "<group>"; };
+		F48BCF5F108B6B8800FF3C1A /* db_0036_1243527660.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0036_1243527660.pbm; sourceTree = "<group>"; };
+		F48BCF60108B6B8800FF3C1A /* db_0037_1243439926.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0037_1243439926.pbm; sourceTree = "<group>"; };
+		F48BCF61108B6B8800FF3C1A /* db_0037_1243440158.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0037_1243440158.pbm; sourceTree = "<group>"; };
+		F48BCF62108B6B8800FF3C1A /* db_0038_1243527340.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0038_1243527340.pbm; sourceTree = "<group>"; };
+		F48BCF63108B6B8800FF3C1A /* db_0038_1243527588.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0038_1243527588.pbm; sourceTree = "<group>"; };
+		F48BCF64108B6B8800FF3C1A /* db_0039_1243439904.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243439904.pbm; sourceTree = "<group>"; };
+		F48BCF65108B6B8800FF3C1A /* db_0039_1243440066.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440066.pbm; sourceTree = "<group>"; };
+		F48BCF66108B6B8800FF3C1A /* db_0039_1243440077.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440077.pbm; sourceTree = "<group>"; };
+		F48BCF67108B6B8800FF3C1A /* db_0039_1243440094.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440094.pbm; sourceTree = "<group>"; };
+		F48BCF68108B6B8800FF3C1A /* db_0039_1243440109.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440109.pbm; sourceTree = "<group>"; };
+		F48BCF69108B6B8800FF3C1A /* db_0039_1243440135.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440135.pbm; sourceTree = "<group>"; };
+		F48BCF6A108B6B8800FF3C1A /* db_0039_1243440168.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243440168.pbm; sourceTree = "<group>"; };
+		F48BCF6B108B6B8800FF3C1A /* db_0039_1243527330.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243527330.pbm; sourceTree = "<group>"; };
+		F48BCF6C108B6B8800FF3C1A /* db_0039_1243527492.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243527492.pbm; sourceTree = "<group>"; };
+		F48BCF6D108B6B8800FF3C1A /* db_0039_1243527589.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243527589.pbm; sourceTree = "<group>"; };
+		F48BCF6E108B6B8800FF3C1A /* db_0039_1243527613.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_0039_1243527613.pbm; sourceTree = "<group>"; };
+		F48BCF6F108B6B8800FF3C1A /* db_003e_1243439999.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243439999.pbm; sourceTree = "<group>"; };
+		F48BCF70108B6B8800FF3C1A /* db_003e_1243440010.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440010.pbm; sourceTree = "<group>"; };
+		F48BCF71108B6B8800FF3C1A /* db_003e_1243440028.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440028.pbm; sourceTree = "<group>"; };
+		F48BCF72108B6B8800FF3C1A /* db_003e_1243440036.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440036.pbm; sourceTree = "<group>"; };
+		F48BCF73108B6B8800FF3C1A /* db_003e_1243440041.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440041.pbm; sourceTree = "<group>"; };
+		F48BCF74108B6B8800FF3C1A /* db_003e_1243440047.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440047.pbm; sourceTree = "<group>"; };
+		F48BCF75108B6B8800FF3C1A /* db_003e_1243440098.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440098.pbm; sourceTree = "<group>"; };
+		F48BCF76108B6B8800FF3C1A /* db_003e_1243440120.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440120.pbm; sourceTree = "<group>"; };
+		F48BCF77108B6B8800FF3C1A /* db_003e_1243440126.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440126.pbm; sourceTree = "<group>"; };
+		F48BCF78108B6B8800FF3C1A /* db_003e_1243440154.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440154.pbm; sourceTree = "<group>"; };
+		F48BCF79108B6B8800FF3C1A /* db_003e_1243440185.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243440185.pbm; sourceTree = "<group>"; };
+		F48BCF7A108B6B8800FF3C1A /* db_003e_1243527345.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527345.pbm; sourceTree = "<group>"; };
+		F48BCF7B108B6B8800FF3C1A /* db_003e_1243527449.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527449.pbm; sourceTree = "<group>"; };
+		F48BCF7C108B6B8800FF3C1A /* db_003e_1243527464.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527464.pbm; sourceTree = "<group>"; };
+		F48BCF7D108B6B8800FF3C1A /* db_003e_1243527483.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527483.pbm; sourceTree = "<group>"; };
+		F48BCF7E108B6B8800FF3C1A /* db_003e_1243527485.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527485.pbm; sourceTree = "<group>"; };
+		F48BCF7F108B6B8800FF3C1A /* db_003e_1243527490.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527490.pbm; sourceTree = "<group>"; };
+		F48BCF80108B6B8800FF3C1A /* db_003e_1243527528.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527528.pbm; sourceTree = "<group>"; };
+		F48BCF81108B6B8800FF3C1A /* db_003e_1243527594.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527594.pbm; sourceTree = "<group>"; };
+		F48BCF82108B6B8800FF3C1A /* db_003e_1243527634.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527634.pbm; sourceTree = "<group>"; };
+		F48BCF83108B6B8800FF3C1A /* db_003e_1243527640.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527640.pbm; sourceTree = "<group>"; };
+		F491FF94108B6E3500CA1302 /* ESReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49FB4FD109CFD3100E0C038 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		F49FB4FE109CFD3100E0C038 /* _imaging.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = _imaging.so; sourceTree = "<group>"; };
+		F49FB500109CFD3100E0C038 /* _imagingmath.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = _imagingmath.so; sourceTree = "<group>"; };
+		F49FB501109CFD3100E0C038 /* _imagingtk.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = _imagingtk.so; sourceTree = "<group>"; };
+		F49FB502109CFD3100E0C038 /* ArgImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ArgImagePlugin.py; sourceTree = "<group>"; };
+		F49FB503109CFD3100E0C038 /* BdfFontFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = BdfFontFile.py; sourceTree = "<group>"; };
+		F49FB504109CFD3100E0C038 /* BmpImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = BmpImagePlugin.py; sourceTree = "<group>"; };
+		F49FB505109CFD3100E0C038 /* BufrStubImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = BufrStubImagePlugin.py; sourceTree = "<group>"; };
+		F49FB506109CFD3100E0C038 /* ContainerIO.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ContainerIO.py; sourceTree = "<group>"; };
+		F49FB507109CFD3100E0C038 /* CurImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = CurImagePlugin.py; sourceTree = "<group>"; };
+		F49FB508109CFD3100E0C038 /* DcxImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = DcxImagePlugin.py; sourceTree = "<group>"; };
+		F49FB509109CFD3100E0C038 /* EpsImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = EpsImagePlugin.py; sourceTree = "<group>"; };
+		F49FB50A109CFD3100E0C038 /* ExifTags.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ExifTags.py; sourceTree = "<group>"; };
+		F49FB50B109CFD3100E0C038 /* FitsStubImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FitsStubImagePlugin.py; sourceTree = "<group>"; };
+		F49FB50C109CFD3100E0C038 /* FliImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FliImagePlugin.py; sourceTree = "<group>"; };
+		F49FB50D109CFD3100E0C038 /* FontFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FontFile.py; sourceTree = "<group>"; };
+		F49FB50E109CFD3100E0C038 /* FpxImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FpxImagePlugin.py; sourceTree = "<group>"; };
+		F49FB50F109CFD3100E0C038 /* GbrImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GbrImagePlugin.py; sourceTree = "<group>"; };
+		F49FB510109CFD3100E0C038 /* GdImageFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GdImageFile.py; sourceTree = "<group>"; };
+		F49FB511109CFD3100E0C038 /* GifImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GifImagePlugin.py; sourceTree = "<group>"; };
+		F49FB512109CFD3100E0C038 /* GimpGradientFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GimpGradientFile.py; sourceTree = "<group>"; };
+		F49FB513109CFD3100E0C038 /* GimpPaletteFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GimpPaletteFile.py; sourceTree = "<group>"; };
+		F49FB514109CFD3100E0C038 /* GribStubImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = GribStubImagePlugin.py; sourceTree = "<group>"; };
+		F49FB515109CFD3100E0C038 /* Hdf5StubImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hdf5StubImagePlugin.py; sourceTree = "<group>"; };
+		F49FB516109CFD3100E0C038 /* IcnsImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = IcnsImagePlugin.py; sourceTree = "<group>"; };
+		F49FB517109CFD3100E0C038 /* IcoImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = IcoImagePlugin.py; sourceTree = "<group>"; };
+		F49FB518109CFD3100E0C038 /* Image.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Image.py; sourceTree = "<group>"; };
+		F49FB519109CFD3100E0C038 /* ImageChops.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageChops.py; sourceTree = "<group>"; };
+		F49FB51A109CFD3100E0C038 /* ImageColor.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageColor.py; sourceTree = "<group>"; };
+		F49FB51B109CFD3100E0C038 /* ImageDraw.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageDraw.py; sourceTree = "<group>"; };
+		F49FB51C109CFD3100E0C038 /* ImageDraw2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageDraw2.py; sourceTree = "<group>"; };
+		F49FB51D109CFD3100E0C038 /* ImageEnhance.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageEnhance.py; sourceTree = "<group>"; };
+		F49FB51E109CFD3100E0C038 /* ImageFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageFile.py; sourceTree = "<group>"; };
+		F49FB51F109CFD3100E0C038 /* ImageFileIO.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageFileIO.py; sourceTree = "<group>"; };
+		F49FB520109CFD3100E0C038 /* ImageFilter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageFilter.py; sourceTree = "<group>"; };
+		F49FB521109CFD3100E0C038 /* ImageFont.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageFont.py; sourceTree = "<group>"; };
+		F49FB522109CFD3100E0C038 /* ImageGL.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageGL.py; sourceTree = "<group>"; };
+		F49FB523109CFD3100E0C038 /* ImageGrab.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageGrab.py; sourceTree = "<group>"; };
+		F49FB524109CFD3100E0C038 /* ImageMath.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageMath.py; sourceTree = "<group>"; };
+		F49FB525109CFD3100E0C038 /* ImageMode.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageMode.py; sourceTree = "<group>"; };
+		F49FB526109CFD3100E0C038 /* ImageOps.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageOps.py; sourceTree = "<group>"; };
+		F49FB527109CFD3100E0C038 /* ImagePalette.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImagePalette.py; sourceTree = "<group>"; };
+		F49FB528109CFD3100E0C038 /* ImagePath.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImagePath.py; sourceTree = "<group>"; };
+		F49FB529109CFD3100E0C038 /* ImageQt.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageQt.py; sourceTree = "<group>"; };
+		F49FB52A109CFD3100E0C038 /* ImageSequence.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageSequence.py; sourceTree = "<group>"; };
+		F49FB52B109CFD3100E0C038 /* ImageStat.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageStat.py; sourceTree = "<group>"; };
+		F49FB52C109CFD3100E0C038 /* ImageTk.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageTk.py; sourceTree = "<group>"; };
+		F49FB52D109CFD3100E0C038 /* ImageTransform.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageTransform.py; sourceTree = "<group>"; };
+		F49FB52E109CFD3100E0C038 /* ImageWin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImageWin.py; sourceTree = "<group>"; };
+		F49FB52F109CFD3100E0C038 /* ImImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImImagePlugin.py; sourceTree = "<group>"; };
+		F49FB530109CFD3100E0C038 /* ImtImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ImtImagePlugin.py; sourceTree = "<group>"; };
+		F49FB531109CFD3100E0C038 /* IptcImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = IptcImagePlugin.py; sourceTree = "<group>"; };
+		F49FB532109CFD3100E0C038 /* JpegImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = JpegImagePlugin.py; sourceTree = "<group>"; };
+		F49FB533109CFD3100E0C038 /* McIdasImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = McIdasImagePlugin.py; sourceTree = "<group>"; };
+		F49FB534109CFD3100E0C038 /* MicImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MicImagePlugin.py; sourceTree = "<group>"; };
+		F49FB535109CFD3100E0C038 /* MpegImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MpegImagePlugin.py; sourceTree = "<group>"; };
+		F49FB536109CFD3100E0C038 /* MspImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MspImagePlugin.py; sourceTree = "<group>"; };
+		F49FB537109CFD3100E0C038 /* OleFileIO.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OleFileIO.py; sourceTree = "<group>"; };
+		F49FB538109CFD3100E0C038 /* PaletteFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PaletteFile.py; sourceTree = "<group>"; };
+		F49FB539109CFD3100E0C038 /* PalmImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PalmImagePlugin.py; sourceTree = "<group>"; };
+		F49FB53A109CFD3100E0C038 /* PcdImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PcdImagePlugin.py; sourceTree = "<group>"; };
+		F49FB53B109CFD3100E0C038 /* PcfFontFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PcfFontFile.py; sourceTree = "<group>"; };
+		F49FB53C109CFD3100E0C038 /* PcxImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PcxImagePlugin.py; sourceTree = "<group>"; };
+		F49FB53D109CFD3100E0C038 /* PdfImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PdfImagePlugin.py; sourceTree = "<group>"; };
+		F49FB53F109CFD3100E0C038 /* PixarImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PixarImagePlugin.py; sourceTree = "<group>"; };
+		F49FB540109CFD3100E0C038 /* PngImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PngImagePlugin.py; sourceTree = "<group>"; };
+		F49FB541109CFD3100E0C038 /* PpmImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PpmImagePlugin.py; sourceTree = "<group>"; };
+		F49FB542109CFD3100E0C038 /* PsdImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PsdImagePlugin.py; sourceTree = "<group>"; };
+		F49FB543109CFD3100E0C038 /* PSDraw.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PSDraw.py; sourceTree = "<group>"; };
+		F49FB544109CFD3100E0C038 /* SgiImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SgiImagePlugin.py; sourceTree = "<group>"; };
+		F49FB545109CFD3100E0C038 /* SpiderImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SpiderImagePlugin.py; sourceTree = "<group>"; };
+		F49FB546109CFD3100E0C038 /* SunImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SunImagePlugin.py; sourceTree = "<group>"; };
+		F49FB547109CFD3100E0C038 /* TarIO.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = TarIO.py; sourceTree = "<group>"; };
+		F49FB548109CFD3100E0C038 /* TgaImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = TgaImagePlugin.py; sourceTree = "<group>"; };
+		F49FB549109CFD3100E0C038 /* TiffImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = TiffImagePlugin.py; sourceTree = "<group>"; };
+		F49FB54A109CFD3100E0C038 /* TiffTags.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = TiffTags.py; sourceTree = "<group>"; };
+		F49FB54B109CFD3100E0C038 /* WalImageFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = WalImageFile.py; sourceTree = "<group>"; };
+		F49FB54C109CFD3100E0C038 /* WmfImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = WmfImagePlugin.py; sourceTree = "<group>"; };
+		F49FB54D109CFD3100E0C038 /* XbmImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XbmImagePlugin.py; sourceTree = "<group>"; };
+		F49FB54E109CFD3100E0C038 /* XpmImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XpmImagePlugin.py; sourceTree = "<group>"; };
+		F49FB54F109CFD3100E0C038 /* XVThumbImagePlugin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = XVThumbImagePlugin.py; sourceTree = "<group>"; };
+		F4B1A942109CFA6D000788BE /* logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logo.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				77631A270C06C501005415CB /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4367D31109B796A00912C41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4367D39109B797C00912C41 /* QTKit.framework in Frameworks */,
+				F4367D3D109B798300912C41 /* Cocoa.framework in Frameworks */,
+				F4367D90109B7F7900912C41 /* CoreVideo.framework in Frameworks */,
+				F4367DAF109B813A00912C41 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F48BCE87108B53A200FF3C1A /* OCR.py */,
+				F48BCE88108B53A200FF3C1A /* Reader.py */,
+				F48BCE89108B53A200FF3C1A /* ReaderController.py */,
+				F4367D41109B79A700912C41 /* ISight.h */,
+				F4367D42109B79A700912C41 /* ISight.m */,
+				F4367FA2109B852000912C41 /* PySight.py */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				77631A3E0C0748CF005415CB /* main.py */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* iSight Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4367D38109B797C00912C41 /* QTKit.framework */,
+				F4367D3C109B798300912C41 /* Cocoa.framework */,
+				F4367D8F109B7F7900912C41 /* CoreVideo.framework */,
+				F4367DAE109B813A00912C41 /* QuartzCore.framework */,
+			);
+			name = "iSight Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F491FF94108B6E3500CA1302 /* ESReader.app */,
+				F4367D33109B796A00912C41 /* iSight.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CamReader2 */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CamReader2;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4B1A942109CFA6D000788BE /* logo.icns */,
+				F48BCECF108B6B7500FF3C1A /* gocr */,
+				77C8C1F70C07829500965286 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				F4367D34109B796A00912C41 /* iSight-Info.plist */,
+				F49FB4FC109CFD3100E0C038 /* PIL */,
+				F48BCED1108B6B8700FF3C1A /* database */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2108210E6602B00E3B3D2 /* ESReader Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* iSight Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F48BCED1108B6B8700FF3C1A /* database */ = {
+			isa = PBXGroup;
+			children = (
+				F48BCED2108B6B8700FF3C1A /* db.lst */,
+				F48BCED3108B6B8700FF3C1A /* db_002b_1243440004.pbm */,
+				F48BCED4108B6B8700FF3C1A /* db_002b_1243440031.pbm */,
+				F48BCED5108B6B8700FF3C1A /* db_002b_1243440042.pbm */,
+				F48BCED6108B6B8700FF3C1A /* db_002b_1243440073.pbm */,
+				F48BCED7108B6B8700FF3C1A /* db_002b_1243440117.pbm */,
+				F48BCED8108B6B8700FF3C1A /* db_002b_1243440171.pbm */,
+				F48BCED9108B6B8700FF3C1A /* db_002b_1243440194.pbm */,
+				F48BCEDA108B6B8700FF3C1A /* db_002b_1243526145.pbm */,
+				F48BCEDB108B6B8700FF3C1A /* db_002b_1243527307.pbm */,
+				F48BCEDC108B6B8700FF3C1A /* db_002b_1243527334.pbm */,
+				F48BCEDD108B6B8700FF3C1A /* db_002b_1243527378.pbm */,
+				F48BCEDE108B6B8700FF3C1A /* db_002b_1243527434.pbm */,
+				F48BCEDF108B6B8700FF3C1A /* db_002b_1243527447.pbm */,
+				F48BCEE0108B6B8700FF3C1A /* db_002b_1243527461.pbm */,
+				F48BCEE1108B6B8700FF3C1A /* db_002b_1243527477.pbm */,
+				F48BCEE2108B6B8700FF3C1A /* db_002b_1243527592.pbm */,
+				F48BCEE3108B6B8700FF3C1A /* db_002b_1243527598.pbm */,
+				F48BCEE4108B6B8700FF3C1A /* db_002b_1243527602.pbm */,
+				F48BCEE5108B6B8700FF3C1A /* db_002b_1243527616.pbm */,
+				F48BCEE6108B6B8700FF3C1A /* db_002b_1243527630.pbm */,
+				F48BCEE7108B6B8700FF3C1A /* db_002b_1243527637.pbm */,
+				F48BCEE8108B6B8700FF3C1A /* db_0030_1243439902.pbm */,
+				F48BCEE9108B6B8700FF3C1A /* db_0030_1243439972.pbm */,
+				F48BCEEA108B6B8700FF3C1A /* db_0030_1243439996.pbm */,
+				F48BCEEB108B6B8700FF3C1A /* db_0030_1243440033.pbm */,
+				F48BCEEC108B6B8700FF3C1A /* db_0030_1243440044.pbm */,
+				F48BCEED108B6B8700FF3C1A /* db_0030_1243440075.pbm */,
+				F48BCEEE108B6B8700FF3C1A /* db_0030_1243440090.pbm */,
+				F48BCEEF108B6B8700FF3C1A /* db_0030_1243440155.pbm */,
+				F48BCEF0108B6B8700FF3C1A /* db_0030_1243440187.pbm */,
+				F48BCEF1108B6B8700FF3C1A /* db_0030_1243526144.pbm */,
+				F48BCEF2108B6B8700FF3C1A /* db_0030_1243527322.pbm */,
+				F48BCEF3108B6B8700FF3C1A /* db_0030_1243527325.pbm */,
+				F48BCEF4108B6B8700FF3C1A /* db_0030_1243527338.pbm */,
+				F48BCEF5108B6B8700FF3C1A /* db_0030_1243527440.pbm */,
+				F48BCEF6108B6B8700FF3C1A /* db_0030_1243527442.pbm */,
+				F48BCEF7108B6B8700FF3C1A /* db_0030_1243527455.pbm */,
+				F48BCEF8108B6B8700FF3C1A /* db_0030_1243527473.pbm */,
+				F48BCEF9108B6B8700FF3C1A /* db_0030_1243527496.pbm */,
+				F48BCEFA108B6B8700FF3C1A /* db_0030_1243527499.pbm */,
+				F48BCEFB108B6B8700FF3C1A /* db_0030_1243527581.pbm */,
+				F48BCEFC108B6B8700FF3C1A /* db_0031_1243439908.pbm */,
+				F48BCEFD108B6B8700FF3C1A /* db_0031_1243439917.pbm */,
+				F48BCEFE108B6B8700FF3C1A /* db_0031_1243440001.pbm */,
+				F48BCEFF108B6B8700FF3C1A /* db_0031_1243440017.pbm */,
+				F48BCF00108B6B8700FF3C1A /* db_0031_1243440069.pbm */,
+				F48BCF01108B6B8700FF3C1A /* db_0031_1243440137.pbm */,
+				F48BCF02108B6B8700FF3C1A /* db_0031_1243440180.pbm */,
+				F48BCF03108B6B8700FF3C1A /* db_0031_1243440189.pbm */,
+				F48BCF04108B6B8700FF3C1A /* db_0031_1243527303.pbm */,
+				F48BCF05108B6B8700FF3C1A /* db_0031_1243527320.pbm */,
+				F48BCF06108B6B8700FF3C1A /* db_0031_1243527335.pbm */,
+				F48BCF07108B6B8700FF3C1A /* db_0031_1243527343.pbm */,
+				F48BCF08108B6B8700FF3C1A /* db_0031_1243527344.pbm */,
+				F48BCF09108B6B8700FF3C1A /* db_0031_1243527436.pbm */,
+				F48BCF0A108B6B8700FF3C1A /* db_0031_1243527443.pbm */,
+				F48BCF0B108B6B8700FF3C1A /* db_0031_1243527457.pbm */,
+				F48BCF0C108B6B8700FF3C1A /* db_0031_1243527458.pbm */,
+				F48BCF0D108B6B8700FF3C1A /* db_0031_1243527497.pbm */,
+				F48BCF0E108B6B8700FF3C1A /* db_0031_1243527529.pbm */,
+				F48BCF0F108B6B8700FF3C1A /* db_0031_1243527548.pbm */,
+				F48BCF10108B6B8700FF3C1A /* db_0031_1243527579.pbm */,
+				F48BCF11108B6B8700FF3C1A /* db_0032_1243440054.pbm */,
+				F48BCF12108B6B8700FF3C1A /* db_0032_1243527327.pbm */,
+				F48BCF13108B6B8700FF3C1A /* db_0033_1243439913.pbm */,
+				F48BCF14108B6B8700FF3C1A /* db_0033_1243439930.pbm */,
+				F48BCF15108B6B8700FF3C1A /* db_0033_1243439991.pbm */,
+				F48BCF16108B6B8700FF3C1A /* db_0034_1243439905.pbm */,
+				F48BCF17108B6B8700FF3C1A /* db_0034_1243439914.pbm */,
+				F48BCF18108B6B8700FF3C1A /* db_0034_1243439969.pbm */,
+				F48BCF19108B6B8700FF3C1A /* db_0034_1243439977.pbm */,
+				F48BCF1A108B6B8700FF3C1A /* db_0034_1243439988.pbm */,
+				F48BCF1B108B6B8700FF3C1A /* db_0034_1243439990.pbm */,
+				F48BCF1C108B6B8700FF3C1A /* db_0034_1243439997.pbm */,
+				F48BCF1D108B6B8700FF3C1A /* db_0034_1243440020.pbm */,
+				F48BCF1E108B6B8700FF3C1A /* db_0034_1243440030.pbm */,
+				F48BCF1F108B6B8700FF3C1A /* db_0034_1243440035.pbm */,
+				F48BCF20108B6B8700FF3C1A /* db_0034_1243440045.pbm */,
+				F48BCF21108B6B8700FF3C1A /* db_0034_1243440068.pbm */,
+				F48BCF22108B6B8700FF3C1A /* db_0034_1243440078.pbm */,
+				F48BCF23108B6B8700FF3C1A /* db_0034_1243440079.pbm */,
+				F48BCF24108B6B8700FF3C1A /* db_0034_1243440095.pbm */,
+				F48BCF25108B6B8700FF3C1A /* db_0034_1243440113.pbm */,
+				F48BCF26108B6B8700FF3C1A /* db_0034_1243440169.pbm */,
+				F48BCF27108B6B8700FF3C1A /* db_0034_1243527328.pbm */,
+				F48BCF28108B6B8700FF3C1A /* db_0034_1243527437.pbm */,
+				F48BCF29108B6B8700FF3C1A /* db_0034_1243527445.pbm */,
+				F48BCF2A108B6B8700FF3C1A /* db_0034_1243527468.pbm */,
+				F48BCF2B108B6B8700FF3C1A /* db_0034_1243527475.pbm */,
+				F48BCF2C108B6B8700FF3C1A /* db_0034_1243527531.pbm */,
+				F48BCF2D108B6B8700FF3C1A /* db_0034_1243527577.pbm */,
+				F48BCF2E108B6B8700FF3C1A /* db_0034_1243527580.pbm */,
+				F48BCF2F108B6B8700FF3C1A /* db_0034_1243527585.pbm */,
+				F48BCF30108B6B8700FF3C1A /* db_0034_1243527638.pbm */,
+				F48BCF31108B6B8700FF3C1A /* db_0035_1243440002.pbm */,
+				F48BCF32108B6B8700FF3C1A /* db_0035_1243440019.pbm */,
+				F48BCF33108B6B8700FF3C1A /* db_0035_1243440059.pbm */,
+				F48BCF34108B6B8700FF3C1A /* db_0035_1243440102.pbm */,
+				F48BCF35108B6B8700FF3C1A /* db_0035_1243440114.pbm */,
+				F48BCF36108B6B8700FF3C1A /* db_0035_1243440196.pbm */,
+				F48BCF37108B6B8700FF3C1A /* db_0035_1243440198.pbm */,
+				F48BCF38108B6B8700FF3C1A /* db_0035_1243526142.pbm */,
+				F48BCF39108B6B8700FF3C1A /* db_0035_1243527283.pbm */,
+				F48BCF3A108B6B8700FF3C1A /* db_0035_1243527363.pbm */,
+				F48BCF3B108B6B8700FF3C1A /* db_0035_1243527366.pbm */,
+				F48BCF3C108B6B8700FF3C1A /* db_0035_1243527444.pbm */,
+				F48BCF3D108B6B8700FF3C1A /* db_0035_1243527459.pbm */,
+				F48BCF3E108B6B8700FF3C1A /* db_0035_1243527462.pbm */,
+				F48BCF3F108B6B8700FF3C1A /* db_0035_1243527467.pbm */,
+				F48BCF40108B6B8700FF3C1A /* db_0035_1243527474.pbm */,
+				F48BCF41108B6B8700FF3C1A /* db_0035_1243527479.pbm */,
+				F48BCF42108B6B8800FF3C1A /* db_0035_1243527480.pbm */,
+				F48BCF43108B6B8800FF3C1A /* db_0035_1243527611.pbm */,
+				F48BCF44108B6B8800FF3C1A /* db_0035_1243527661.pbm */,
+				F48BCF45108B6B8800FF3C1A /* db_0036_1243439909.pbm */,
+				F48BCF46108B6B8800FF3C1A /* db_0036_1243439910.pbm */,
+				F48BCF47108B6B8800FF3C1A /* db_0036_1243439968.pbm */,
+				F48BCF48108B6B8800FF3C1A /* db_0036_1243439975.pbm */,
+				F48BCF49108B6B8800FF3C1A /* db_0036_1243439976.pbm */,
+				F48BCF4A108B6B8800FF3C1A /* db_0036_1243439989.pbm */,
+				F48BCF4B108B6B8800FF3C1A /* db_0036_1243440018.pbm */,
+				F48BCF4C108B6B8800FF3C1A /* db_0036_1243440058.pbm */,
+				F48BCF4D108B6B8800FF3C1A /* db_0036_1243440070.pbm */,
+				F48BCF4E108B6B8800FF3C1A /* db_0036_1243440071.pbm */,
+				F48BCF4F108B6B8800FF3C1A /* db_0036_1243440082.pbm */,
+				F48BCF50108B6B8800FF3C1A /* db_0036_1243440099.pbm */,
+				F48BCF51108B6B8800FF3C1A /* db_0036_1243440100.pbm */,
+				F48BCF52108B6B8800FF3C1A /* db_0036_1243440107.pbm */,
+				F48BCF53108B6B8800FF3C1A /* db_0036_1243440108.pbm */,
+				F48BCF54108B6B8800FF3C1A /* db_0036_1243440112.pbm */,
+				F48BCF55108B6B8800FF3C1A /* db_0036_1243440115.pbm */,
+				F48BCF56108B6B8800FF3C1A /* db_0036_1243440123.pbm */,
+				F48BCF57108B6B8800FF3C1A /* db_0036_1243440130.pbm */,
+				F48BCF58108B6B8800FF3C1A /* db_0036_1243440179.pbm */,
+				F48BCF59108B6B8800FF3C1A /* db_0036_1243527323.pbm */,
+				F48BCF5A108B6B8800FF3C1A /* db_0036_1243527513.pbm */,
+				F48BCF5B108B6B8800FF3C1A /* db_0036_1243527586.pbm */,
+				F48BCF5C108B6B8800FF3C1A /* db_0036_1243527591.pbm */,
+				F48BCF5D108B6B8800FF3C1A /* db_0036_1243527596.pbm */,
+				F48BCF5E108B6B8800FF3C1A /* db_0036_1243527614.pbm */,
+				F48BCF5F108B6B8800FF3C1A /* db_0036_1243527660.pbm */,
+				F48BCF60108B6B8800FF3C1A /* db_0037_1243439926.pbm */,
+				F48BCF61108B6B8800FF3C1A /* db_0037_1243440158.pbm */,
+				F48BCF62108B6B8800FF3C1A /* db_0038_1243527340.pbm */,
+				F48BCF63108B6B8800FF3C1A /* db_0038_1243527588.pbm */,
+				F48BCF64108B6B8800FF3C1A /* db_0039_1243439904.pbm */,
+				F48BCF65108B6B8800FF3C1A /* db_0039_1243440066.pbm */,
+				F48BCF66108B6B8800FF3C1A /* db_0039_1243440077.pbm */,
+				F48BCF67108B6B8800FF3C1A /* db_0039_1243440094.pbm */,
+				F48BCF68108B6B8800FF3C1A /* db_0039_1243440109.pbm */,
+				F48BCF69108B6B8800FF3C1A /* db_0039_1243440135.pbm */,
+				F48BCF6A108B6B8800FF3C1A /* db_0039_1243440168.pbm */,
+				F48BCF6B108B6B8800FF3C1A /* db_0039_1243527330.pbm */,
+				F48BCF6C108B6B8800FF3C1A /* db_0039_1243527492.pbm */,
+				F48BCF6D108B6B8800FF3C1A /* db_0039_1243527589.pbm */,
+				F48BCF6E108B6B8800FF3C1A /* db_0039_1243527613.pbm */,
+				F48BCF6F108B6B8800FF3C1A /* db_003e_1243439999.pbm */,
+				F48BCF70108B6B8800FF3C1A /* db_003e_1243440010.pbm */,
+				F48BCF71108B6B8800FF3C1A /* db_003e_1243440028.pbm */,
+				F48BCF72108B6B8800FF3C1A /* db_003e_1243440036.pbm */,
+				F48BCF73108B6B8800FF3C1A /* db_003e_1243440041.pbm */,
+				F48BCF74108B6B8800FF3C1A /* db_003e_1243440047.pbm */,
+				F48BCF75108B6B8800FF3C1A /* db_003e_1243440098.pbm */,
+				F48BCF76108B6B8800FF3C1A /* db_003e_1243440120.pbm */,
+				F48BCF77108B6B8800FF3C1A /* db_003e_1243440126.pbm */,
+				F48BCF78108B6B8800FF3C1A /* db_003e_1243440154.pbm */,
+				F48BCF79108B6B8800FF3C1A /* db_003e_1243440185.pbm */,
+				F48BCF7A108B6B8800FF3C1A /* db_003e_1243527345.pbm */,
+				F48BCF7B108B6B8800FF3C1A /* db_003e_1243527449.pbm */,
+				F48BCF7C108B6B8800FF3C1A /* db_003e_1243527464.pbm */,
+				F48BCF7D108B6B8800FF3C1A /* db_003e_1243527483.pbm */,
+				F48BCF7E108B6B8800FF3C1A /* db_003e_1243527485.pbm */,
+				F48BCF7F108B6B8800FF3C1A /* db_003e_1243527490.pbm */,
+				F48BCF80108B6B8800FF3C1A /* db_003e_1243527528.pbm */,
+				F48BCF81108B6B8800FF3C1A /* db_003e_1243527594.pbm */,
+				F48BCF82108B6B8800FF3C1A /* db_003e_1243527634.pbm */,
+				F48BCF83108B6B8800FF3C1A /* db_003e_1243527640.pbm */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		F49FB4FC109CFD3100E0C038 /* PIL */ = {
+			isa = PBXGroup;
+			children = (
+				F49FB4FD109CFD3100E0C038 /* __init__.py */,
+				F49FB4FE109CFD3100E0C038 /* _imaging.so */,
+				F49FB500109CFD3100E0C038 /* _imagingmath.so */,
+				F49FB501109CFD3100E0C038 /* _imagingtk.so */,
+				F49FB502109CFD3100E0C038 /* ArgImagePlugin.py */,
+				F49FB503109CFD3100E0C038 /* BdfFontFile.py */,
+				F49FB504109CFD3100E0C038 /* BmpImagePlugin.py */,
+				F49FB505109CFD3100E0C038 /* BufrStubImagePlugin.py */,
+				F49FB506109CFD3100E0C038 /* ContainerIO.py */,
+				F49FB507109CFD3100E0C038 /* CurImagePlugin.py */,
+				F49FB508109CFD3100E0C038 /* DcxImagePlugin.py */,
+				F49FB509109CFD3100E0C038 /* EpsImagePlugin.py */,
+				F49FB50A109CFD3100E0C038 /* ExifTags.py */,
+				F49FB50B109CFD3100E0C038 /* FitsStubImagePlugin.py */,
+				F49FB50C109CFD3100E0C038 /* FliImagePlugin.py */,
+				F49FB50D109CFD3100E0C038 /* FontFile.py */,
+				F49FB50E109CFD3100E0C038 /* FpxImagePlugin.py */,
+				F49FB50F109CFD3100E0C038 /* GbrImagePlugin.py */,
+				F49FB510109CFD3100E0C038 /* GdImageFile.py */,
+				F49FB511109CFD3100E0C038 /* GifImagePlugin.py */,
+				F49FB512109CFD3100E0C038 /* GimpGradientFile.py */,
+				F49FB513109CFD3100E0C038 /* GimpPaletteFile.py */,
+				F49FB514109CFD3100E0C038 /* GribStubImagePlugin.py */,
+				F49FB515109CFD3100E0C038 /* Hdf5StubImagePlugin.py */,
+				F49FB516109CFD3100E0C038 /* IcnsImagePlugin.py */,
+				F49FB517109CFD3100E0C038 /* IcoImagePlugin.py */,
+				F49FB518109CFD3100E0C038 /* Image.py */,
+				F49FB519109CFD3100E0C038 /* ImageChops.py */,
+				F49FB51A109CFD3100E0C038 /* ImageColor.py */,
+				F49FB51B109CFD3100E0C038 /* ImageDraw.py */,
+				F49FB51C109CFD3100E0C038 /* ImageDraw2.py */,
+				F49FB51D109CFD3100E0C038 /* ImageEnhance.py */,
+				F49FB51E109CFD3100E0C038 /* ImageFile.py */,
+				F49FB51F109CFD3100E0C038 /* ImageFileIO.py */,
+				F49FB520109CFD3100E0C038 /* ImageFilter.py */,
+				F49FB521109CFD3100E0C038 /* ImageFont.py */,
+				F49FB522109CFD3100E0C038 /* ImageGL.py */,
+				F49FB523109CFD3100E0C038 /* ImageGrab.py */,
+				F49FB524109CFD3100E0C038 /* ImageMath.py */,
+				F49FB525109CFD3100E0C038 /* ImageMode.py */,
+				F49FB526109CFD3100E0C038 /* ImageOps.py */,
+				F49FB527109CFD3100E0C038 /* ImagePalette.py */,
+				F49FB528109CFD3100E0C038 /* ImagePath.py */,
+				F49FB529109CFD3100E0C038 /* ImageQt.py */,
+				F49FB52A109CFD3100E0C038 /* ImageSequence.py */,
+				F49FB52B109CFD3100E0C038 /* ImageStat.py */,
+				F49FB52C109CFD3100E0C038 /* ImageTk.py */,
+				F49FB52D109CFD3100E0C038 /* ImageTransform.py */,
+				F49FB52E109CFD3100E0C038 /* ImageWin.py */,
+				F49FB52F109CFD3100E0C038 /* ImImagePlugin.py */,
+				F49FB530109CFD3100E0C038 /* ImtImagePlugin.py */,
+				F49FB531109CFD3100E0C038 /* IptcImagePlugin.py */,
+				F49FB532109CFD3100E0C038 /* JpegImagePlugin.py */,
+				F49FB533109CFD3100E0C038 /* McIdasImagePlugin.py */,
+				F49FB534109CFD3100E0C038 /* MicImagePlugin.py */,
+				F49FB535109CFD3100E0C038 /* MpegImagePlugin.py */,
+				F49FB536109CFD3100E0C038 /* MspImagePlugin.py */,
+				F49FB537109CFD3100E0C038 /* OleFileIO.py */,
+				F49FB538109CFD3100E0C038 /* PaletteFile.py */,
+				F49FB539109CFD3100E0C038 /* PalmImagePlugin.py */,
+				F49FB53A109CFD3100E0C038 /* PcdImagePlugin.py */,
+				F49FB53B109CFD3100E0C038 /* PcfFontFile.py */,
+				F49FB53C109CFD3100E0C038 /* PcxImagePlugin.py */,
+				F49FB53D109CFD3100E0C038 /* PdfImagePlugin.py */,
+				F49FB53F109CFD3100E0C038 /* PixarImagePlugin.py */,
+				F49FB540109CFD3100E0C038 /* PngImagePlugin.py */,
+				F49FB541109CFD3100E0C038 /* PpmImagePlugin.py */,
+				F49FB542109CFD3100E0C038 /* PsdImagePlugin.py */,
+				F49FB543109CFD3100E0C038 /* PSDraw.py */,
+				F49FB544109CFD3100E0C038 /* SgiImagePlugin.py */,
+				F49FB545109CFD3100E0C038 /* SpiderImagePlugin.py */,
+				F49FB546109CFD3100E0C038 /* SunImagePlugin.py */,
+				F49FB547109CFD3100E0C038 /* TarIO.py */,
+				F49FB548109CFD3100E0C038 /* TgaImagePlugin.py */,
+				F49FB549109CFD3100E0C038 /* TiffImagePlugin.py */,
+				F49FB54A109CFD3100E0C038 /* TiffTags.py */,
+				F49FB54B109CFD3100E0C038 /* WalImageFile.py */,
+				F49FB54C109CFD3100E0C038 /* WmfImagePlugin.py */,
+				F49FB54D109CFD3100E0C038 /* XbmImagePlugin.py */,
+				F49FB54E109CFD3100E0C038 /* XpmImagePlugin.py */,
+				F49FB54F109CFD3100E0C038 /* XVThumbImagePlugin.py */,
+			);
+			name = PIL;
+			path = ../Dependencies/PIL;
+			sourceTree = "<group>";
+		};
+		F4F2108210E6602B00E3B3D2 /* ESReader Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				77631A260C06C501005415CB /* Python.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "ESReader Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F4367D2E109B796A00912C41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ESReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ESReader" */;
+			buildPhases = (
+				F4367F74109B832500912C41 /* Copy Frameworks */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				F49100B1108B839400CA1302 /* Copy Database */,
+				F49FB60F109CFDA200E0C038 /* Copy PIL */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4367D89109B7F3F00912C41 /* PBXTargetDependency */,
+			);
+			name = ESReader;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CamReader2;
+			productReference = F491FF94108B6E3500CA1302 /* ESReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4367D32109B796A00912C41 /* iSight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4367D37109B796B00912C41 /* Build configuration list for PBXNativeTarget "iSight" */;
+			buildPhases = (
+				F4367D2E109B796A00912C41 /* Headers */,
+				F4367D2F109B796A00912C41 /* Resources */,
+				F4367D30109B796A00912C41 /* Sources */,
+				F4367D31109B796A00912C41 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iSight;
+			productName = iSight;
+			productReference = F4367D33109B796A00912C41 /* iSight.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ESReader" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CamReader2 */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4367D32109B796A00912C41 /* iSight */,
+				8D1107260486CEB800E47090 /* ESReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77631A3F0C0748CF005415CB /* main.py in Resources */,
+				77C8C1F90C07829500965286 /* MainMenu.xib in Resources */,
+				F48BCE8B108B53A200FF3C1A /* OCR.py in Resources */,
+				F48BCE8C108B53A200FF3C1A /* Reader.py in Resources */,
+				F48BCE8D108B53A200FF3C1A /* ReaderController.py in Resources */,
+				F48BCED0108B6B7500FF3C1A /* gocr in Resources */,
+				F4367FA3109B852000912C41 /* PySight.py in Resources */,
+				F4B1A943109CFA6D000788BE /* logo.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4367D2F109B796A00912C41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4367D30109B796A00912C41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4367D87109B7F2700912C41 /* ISight.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4367D89109B7F3F00912C41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4367D32109B796A00912C41 /* iSight */;
+			targetProxy = F4367D88109B7F3F00912C41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77C8C1F70C07829500965286 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C8C1F80C07829500965286 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CamReader2_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CamReader2;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ESReader_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = ESReader;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		F4367D35109B796B00912C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "iSight-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = iSight;
+			};
+			name = Debug;
+		};
+		F4367D36109B796B00912C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Resources/iSight-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = iSight;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ESReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ESReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4367D37109B796B00912C41 /* Build configuration list for PBXNativeTarget "iSight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4367D35109B796B00912C41 /* Debug */,
+				F4367D36109B796B00912C41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

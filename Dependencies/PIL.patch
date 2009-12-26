@@ -1,0 +1,24 @@
+--- setup.py    2006-12-03 12:37:29.000000000 +0100
+132c132
+<         elif sys.platform == "darwin":
+---
+>         #elif sys.platform == "darwin":
+134,135c134,135
+<             add_directory(include_dirs, "/sw/include/freetype2")
+<             add_directory(include_dirs, "/sw/lib/freetype2/include")
+---
+>             #add_directory(include_dirs, "/sw/include/freetype2")
+>             #add_directory(include_dirs, "/sw/lib/freetype2/include")
+137,138c137,138
+<             add_directory(library_dirs, "/sw/lib")
+<             add_directory(include_dirs, "/sw/include")
+---
+>             #add_directory(library_dirs, "/sw/lib")
+>             #add_directory(include_dirs, "/sw/include")
+140,141c140,141
+<             add_directory(library_dirs, "/opt/local/lib")
+<             add_directory(include_dirs, "/opt/local/include")
+---
+>             #add_directory(library_dirs, "/opt/local/lib")
+>             #add_directory(include_dirs, "/opt/local/include")
+
