@@ -1,3 +1,5 @@
+#!/bin/bash
+
 GOCR=gocr-0.47
 GOCR_ARCHIVE=$GOCR.tar.gz
 GOCR_PRODUCT=gocr

@@ -12,6 +12,7 @@
 		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F4078AB110E66FF7001CDEC4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4078AAF10E66FF7001CDEC4 /* Credits.rtf */; };
 		F4367D39109B797C00912C41 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D38109B797C00912C41 /* QTKit.framework */; };
 		F4367D3D109B798300912C41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4367D3C109B798300912C41 /* Cocoa.framework */; };
 		F4367D87109B7F2700912C41 /* ISight.m in Sources */ = {isa = PBXBuildFile; fileRef = F4367D42109B79A700912C41 /* ISight.m */; };
@@ -598,6 +599,8 @@
 		77631A3E0C0748CF005415CB /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4078A7110E66C9F001CDEC4 /* ESReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4078AB010E66FF7001CDEC4 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		F4367D33109B796A00912C41 /* iSight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iSight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4367D34109B796A00912C41 /* iSight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iSight-Info.plist"; sourceTree = "<group>"; };
 		F4367D38109B797C00912C41 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
@@ -789,7 +792,6 @@
 		F48BCF81108B6B8800FF3C1A /* db_003e_1243527594.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527594.pbm; sourceTree = "<group>"; };
 		F48BCF82108B6B8800FF3C1A /* db_003e_1243527634.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527634.pbm; sourceTree = "<group>"; };
 		F48BCF83108B6B8800FF3C1A /* db_003e_1243527640.pbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_003e_1243527640.pbm; sourceTree = "<group>"; };
-		F491FF94108B6E3500CA1302 /* ESReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49FB4FD109CFD3100E0C038 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		F49FB4FE109CFD3100E0C038 /* _imaging.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = _imaging.so; sourceTree = "<group>"; };
 		F49FB500109CFD3100E0C038 /* _imagingmath.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = _imagingmath.so; sourceTree = "<group>"; };
@@ -927,8 +929,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F491FF94108B6E3500CA1302 /* ESReader.app */,
 				F4367D33109B796A00912C41 /* iSight.framework */,
+				F4078A7110E66C9F001CDEC4 /* ESReader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -955,6 +957,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4078AAF10E66FF7001CDEC4 /* Credits.rtf */,
 				F4B1A942109CFA6D000788BE /* logo.icns */,
 				F48BCECF108B6B7500FF3C1A /* gocr */,
 				77C8C1F70C07829500965286 /* MainMenu.xib */,
@@ -1278,6 +1281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ESReader" */;
 			buildPhases = (
+				F4078ACF10E67093001CDEC4 /* ShellScript */,
 				F4367F74109B832500912C41 /* Copy Frameworks */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -1293,7 +1297,7 @@
 			name = ESReader;
 			productInstallPath = "$(HOME)/Applications";
 			productName = CamReader2;
-			productReference = F491FF94108B6E3500CA1302 /* ESReader.app */;
+			productReference = F4078A7110E66C9F001CDEC4 /* ESReader.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F4367D32109B796A00912C41 /* iSight */ = {
@@ -1345,6 +1349,7 @@
 				F48BCED0108B6B7500FF3C1A /* gocr in Resources */,
 				F4367FA3109B852000912C41 /* PySight.py in Resources */,
 				F4B1A943109CFA6D000788BE /* logo.icns in Resources */,
+				F4078AB110E66FF7001CDEC4 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1356,6 +1361,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4078ACF10E67093001CDEC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd Dependencies\n./build-deps.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -1393,6 +1414,14 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		F4078AAF10E66FF7001CDEC4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4078AB010E66FF7001CDEC4 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1409,10 +1438,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CamReader2_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				GCC_PREFIX_HEADER = ESReader_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = CamReader2;
+				PRODUCT_NAME = ESReader;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -1444,7 +1473,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
 		};
@@ -1457,7 +1486,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};
@@ -1475,7 +1504,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "iSight-Info.plist";
+				INFOPLIST_FILE = "Resources/iSight-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
