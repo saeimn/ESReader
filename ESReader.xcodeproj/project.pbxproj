@@ -1330,8 +1330,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4367D32109B796A00912C41 /* iSight */,
 				8D1107260486CEB800E47090 /* ESReader */,
+				F4367D32109B796A00912C41 /* iSight */,
 			);
 		};
 /* End PBXProject section */
