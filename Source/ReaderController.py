@@ -31,10 +31,7 @@ from QTKit import QTCaptureView
 from PIL import Image
 import PySight
 from Reader import Reader
-from tempfile import mktemp
 import re
-
-PIL_TEMP_FILE = mktemp() + '.png'
 
 class ReaderController(NSWindowController):
 
@@ -87,12 +84,10 @@ class ReaderController(NSWindowController):
 
 
     def nsimage2pil(self, image):
-        # save as png and reopen with pil
         rep = image.representations().objectAtIndex_(0)
-        data = rep.representationUsingType_properties_(NSPNGFileType, None)
-        f = PIL_TEMP_FILE
-        data.writeToFile_atomically_(f, False)
-        return Image.open(f)
+        data = rep.bitmapData()
+        im =  Image.fromstring("RGBA", (int(image.size().width), int(image.size().height)), data)
+        return im
 
 
     # IB Action resetClicked:
